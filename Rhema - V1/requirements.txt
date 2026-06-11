@@ -1,0 +1,10 @@
+# Rhema -- Auto Formatter
+# Python dependencies
+# Install with: pip install -r requirements.txt
+
+# Word document reading and writing
+python-docx==1.1.2
+
+# Windows only -- required for automatic TOC update via Microsoft Word COM automation
+# Remove or ignore this line on Linux/Mac
+pywin32; sys_platform == "win32"
