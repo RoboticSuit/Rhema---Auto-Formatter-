@@ -1,43 +1,35 @@
 # Source Trace:
-# File: generator_v0.2.py
+# File: generator_v0.4.py
 # Knowledge Files: CodeSourceDB v3.6, SyntaxBiasDB v2.3, HumanSyntaxDB v1.2
 # REF_IDs: RM_DO178_001, RM_NIST_001, RM_HCI_002, WEB_PY_001, WEB_PY_003
-# Logic: Template placeholder replacement, document metadata injection, and
-#        deterministic string manipulation with strict type checking.
-#        v0.2 -- unfilled placeholder check extended to tables and headers/footers
-#                to match the coverage of the replacement pass (fix 9).
+# Logic: Fully dynamic placeholder replacement. CoverMetadata reduced to two
+#        required fields (title, author). All other cover fields discovered by
+#        scanning the template and prompted generically by token name.
+#        v0.4 -- CoverMetadata removed. prompt_cover_metadata returns Dict[str, str].
+#                generate() accepts Dict[str, str]. Unknown custom placeholders
+#                are discovered and prompted automatically.
 
 """
 Rhema -- Auto Formatter
 core/generator.py
 
-Single responsibility: Injects cover page metadata and updates the TOC
-field in a formatted document. Replaces all [[PLACEHOLDER]] tokens in
-the document with real values supplied by the user or derived from the
-source file.
+Single responsibility: Injects cover page metadata into a formatted document
+by replacing [[PLACEHOLDER]] tokens with user-supplied values.
 
-Takes:
-  - formatted_doc: python-docx Document from formatter.py
-  - metadata: CoverMetadata dataclass with user-supplied field values
-  - source_path: Path to the original source file (used for defaults)
+Two tiers of fields:
 
-Returns a GeneratorResult containing:
-  - success: True if all required fields were filled
-  - final_doc: the python-docx Document ready for writer.py
-  - missing_fields: list of placeholder names that could not be filled
-  - error: non-empty string if generation failed
+  Tier 1 -- Always required (hardcoded):
+    [[DOCUMENT_TITLE]]  -- defaults to source filename stem
+    [[AUTHOR_NAME]]     -- always prompted, no default
 
-The cover page fields that are always required:
-  [[DOCUMENT_TYPE]]         -- must be supplied by the user
-  [[DOCUMENT_TITLE]]        -- defaults to source filename stem
-  [[SUBTITLE]]              -- optional, replaced with empty string if skipped
-  [[AUTHOR_NAME]]           -- must be supplied or skipped
-  [[DEPARTMENT_ORGANISATION]] -- optional
-  [[MONTH_YEAR]]            -- defaults to current month and year
+  Tier 2 -- Fully dynamic (template-driven):
+    Every other [[TOKEN]] found in the template is discovered by scanning
+    the document and prompted generically. The user may press Enter to skip
+    any Tier 2 field. Unknown custom tokens (e.g. [[EMPLOYEE_ID]]) are
+    handled identically to known ones -- Rhema prompts for them by name.
 
-Header/footer fields:
-  [[ORGANISATION]]          -- defaults to [[DEPARTMENT_ORGANISATION]] value
-  [[CONFIDENTIALITY_LABEL]] -- defaults to "INTERNAL"
+Structural markers ([[BODY_CONTENT_START]], [[REFERENCES_START]]) are
+silently replaced with empty string and never prompted.
 
 Governing standards:
   DO-178C source traceability    -- REF_ID: RM_DO178_001
@@ -49,42 +41,43 @@ import re
 from pathlib import Path
 from dataclasses import dataclass, field
 from datetime import datetime
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Set
 
 from docx import Document as DocxDocument
 from docx.oxml.ns import qn
 
 
 # ---------------------------------------------------------------------------
-# Cover metadata data structure
+# Structural markers -- replaced silently, never prompted.
+# REF_ID: RM_DO178_001
 # ---------------------------------------------------------------------------
 
-@dataclass
-class CoverMetadata:
-    """
-    All variable fields for a single document run.
+_STRUCTURAL_PLACEHOLDERS: Set[str] = {
+    "[[BODY_CONTENT_START]]",
+    "[[REFERENCES_START]]",
+}
 
-    Fields with defaults are optional -- the user may press Enter to skip.
-    Fields without defaults must be explicitly provided or left as empty
-    string to skip (in which case the placeholder is cleared but blank).
-    """
-    document_type:           str = ""          # [[DOCUMENT_TYPE]]
-    document_title:          str = ""          # [[DOCUMENT_TITLE]]
-    subtitle:                str = ""          # [[SUBTITLE]]
-    author_name:             str = ""          # [[AUTHOR_NAME]]
-    department_organisation: str = ""          # [[DEPARTMENT_ORGANISATION]]
-    month_year:              str = ""          # [[MONTH_YEAR]] -- auto-filled if empty
-    organisation:            str = ""          # [[ORGANISATION]] in header
-    confidentiality_label:   str = "INTERNAL"  # [[CONFIDENTIALITY_LABEL]] in footer
-    # Academic template fields
-    institution_name:        str = ""          # [[INSTITUTION_NAME]]
-    faculty_department:      str = ""          # [[FACULTY_DEPARTMENT]]
-    student_id:              str = ""          # [[STUDENT_ID]]
-    supervisor_name:         str = ""          # [[SUPERVISOR_NAME]]
-    course_code:             str = ""          # [[COURSE_CODE]]
-    course_name:             str = ""          # [[COURSE_NAME]]
-    submission_date:         str = ""          # [[SUBMISSION_DATE]]
+# ---------------------------------------------------------------------------
+# Tier 1 -- always required fields.
+# REF_ID: RM_DO178_001, RM_NIST_001
+# ---------------------------------------------------------------------------
 
+_REQUIRED_PLACEHOLDER_TITLE:  str = "[[DOCUMENT_TITLE]]"
+_REQUIRED_PLACEHOLDER_AUTHOR: str = "[[AUTHOR_NAME]]"
+
+# ---------------------------------------------------------------------------
+# Known smart defaults for common Tier 2 tokens.
+# Any token not listed here gets an empty default (press Enter to skip).
+# Values that require runtime computation are declared as empty here and
+# filled by _get_default() at prompt time. REF_ID: RM_DO178_001
+# ---------------------------------------------------------------------------
+
+_DATE_TOKENS: Set[str] = {"[[MONTH_YEAR]]", "[[SUBMISSION_DATE]]"}
+
+_KNOWN_DEFAULTS: Dict[str, str] = {
+    "[[DOCUMENT_TYPE]]":          "Report",
+    "[[CONFIDENTIALITY_LABEL]]":  "INTERNAL",
+}
 
 # ---------------------------------------------------------------------------
 # Result data structure
@@ -95,10 +88,10 @@ class GeneratorResult:
     """
     Output of the generator.
 
-    success        -- True if all required placeholders were replaced
+    success        -- True if replacement ran without error
     final_doc      -- python-docx Document ready for writer.py (None on error)
-    missing_fields -- placeholder names that were not filled (empty = all filled)
-    error          -- plain-language error (empty on success)
+    missing_fields -- tokens that remained unfilled after replacement
+    error          -- plain-language error message (empty on success)
     """
     success:        bool = False
     final_doc:      Optional[object] = None
@@ -107,71 +100,83 @@ class GeneratorResult:
 
 
 # ---------------------------------------------------------------------------
-# Placeholder replacement
+# Template scanner
+# Discovers all [[TOKEN]] placeholders present in the document.
+# REF_ID: RM_DO178_001
 # ---------------------------------------------------------------------------
 
-# All placeholders declared in the template -- maps placeholder name to
-# the CoverMetadata attribute that fills it.
-# REF_ID: RM_DO178_001
-_PLACEHOLDER_MAP: Dict[str, Optional[str]] = {
-    "[[DOCUMENT_TYPE]]":           "document_type",
-    "[[DOCUMENT_TITLE]]":          "document_title",
-    "[[SUBTITLE]]":                "subtitle",
-    "[[AUTHOR_NAME]]":             "author_name",
-    "[[DEPARTMENT_ORGANISATION]]": "department_organisation",
-    "[[MONTH_YEAR]]":              "month_year",
-    "[[ORGANISATION]]":            "organisation",
-    "[[CONFIDENTIALITY_LABEL]]":   "confidentiality_label",
-    # Academic template placeholders
-    "[[INSTITUTION_NAME]]":        "institution_name",
-    "[[FACULTY_DEPARTMENT]]":      "faculty_department",
-    "[[STUDENT_ID]]":              "student_id",
-    "[[SUPERVISOR_NAME]]":         "supervisor_name",
-    "[[COURSE_CODE]]":             "course_code",
-    "[[COURSE_NAME]]":             "course_name",
-    "[[SUBMISSION_DATE]]":         "submission_date",
-    "[[BODY_CONTENT_START]]":      None,   # removed by formatter -- should not appear
-    "[[REFERENCES_START]]":        None,   # removed by formatter -- should not appear
-}
+_PH_PATTERN = re.compile(r'\[\[[A-Z][A-Z0-9_]*\]\]')
 
 
-def _fill_metadata_defaults(meta: CoverMetadata, source_path: Path) -> CoverMetadata:
+def _scan_placeholders(doc: Any) -> Set[str]:
     """
-    Fill any empty metadata fields with sensible defaults before replacement.
-
-    - document_title: defaults to source file stem (filename without extension)
-    - month_year: defaults to current month and year
-    - organisation: defaults to department_organisation if empty
-    - confidentiality_label: defaults to "INTERNAL" if empty
-
+    Scan all zones of the document (body, tables, headers, footers) for
+    [[PLACEHOLDER]] tokens. Returns the set of all unique tokens found.
     REF_ID: RM_DO178_001
     """
-    if len(meta.document_title) == 0:
-        meta.document_title = source_path.stem.replace("_", " ").replace("-", " ").title()
+    found: Set[str] = set()
 
-    if len(meta.month_year) == 0:
+    def _scan_paragraphs(paragraphs: Any) -> None:
+        for para in paragraphs:
+            for match in _PH_PATTERN.finditer(para.text):
+                found.add(match.group(0))
+
+    _scan_paragraphs(doc.paragraphs)
+
+    for table in doc.tables:
+        for row in table.rows:
+            for cell in row.cells:
+                _scan_paragraphs(cell.paragraphs)
+
+    for section in doc.sections:
+        for hdr in [section.header, section.first_page_header]:
+            if hdr is not None:
+                _scan_paragraphs(hdr.paragraphs)
+        for ftr in [section.footer, section.first_page_footer]:
+            if ftr is not None:
+                _scan_paragraphs(ftr.paragraphs)
+
+    return found
+
+
+# ---------------------------------------------------------------------------
+# Display name helper
+# Converts [[EMPLOYEE_ID]] -> "Employee Id" for terminal display.
+# REF_ID: RM_HCI_002
+# ---------------------------------------------------------------------------
+
+def _display_name(token: str) -> str:
+    """Strip [[ and ]] and convert SNAKE_CASE to Title Case for display."""
+    inner: str = token.strip("[]")
+    return inner.replace("_", " ").title()
+
+
+# ---------------------------------------------------------------------------
+# Default value helper
+# Returns the appropriate default for a given token at runtime.
+# REF_ID: RM_DO178_001
+# ---------------------------------------------------------------------------
+
+def _get_default(token: str, source_path: Path) -> str:
+    """Return the smart default for a known token, or empty string."""
+    if token == _REQUIRED_PLACEHOLDER_TITLE:
+        return source_path.stem.replace("_", " ").replace("-", " ").title()
+
+    if token in _DATE_TOKENS:
         import platform as _platform
         _day_fmt: str = "%#d" if _platform.system() == "Windows" else "%-d"
-        meta.month_year = datetime.now().strftime(_day_fmt + " %B %Y")
+        return datetime.now().strftime(_day_fmt + " %B %Y")
 
-    if len(meta.organisation) == 0:
-        meta.organisation = (
-            meta.department_organisation
-            if len(meta.department_organisation) > 0
-            else ""
-        )
+    return _KNOWN_DEFAULTS.get(token, "")
 
-    if len(meta.confidentiality_label) == 0:
-        meta.confidentiality_label = "INTERNAL"
 
-    return meta
-
+# ---------------------------------------------------------------------------
+# Placeholder replacement engine -- unchanged from v0.3
+# REF_ID: RM_DO178_001
+# ---------------------------------------------------------------------------
 
 def _replace_in_run(run: Any, replacements: Dict[str, str]) -> None:
-    """
-    Replace all placeholder tokens in a single run's text.
-    Operates directly on the run.text string.
-    """
+    """Replace all placeholder tokens in a single run's text."""
     text: str = run.text
     for placeholder, value in replacements.items():
         if placeholder in text:
@@ -184,39 +189,26 @@ def _replace_placeholders_in_doc(
     replacements: Dict[str, str],
 ) -> List[str]:
     """
-    Walk all paragraphs in the document (including headers, footers, and tables)
-    and replace placeholder tokens with their values.
+    Walk all paragraphs (body, tables, headers, footers) and replace
+    placeholder tokens with their values.
 
-    Returns a list of placeholder names that were found and could not be
-    replaced because their value is empty.
-
-    Note: Word sometimes splits a placeholder across multiple runs
-    (e.g. [[DOC and UMENT_TITLE]] in separate runs). The paragraph-level
-    join-and-split approach handles this case.
-
+    Returns a list of tokens that remained in the document after replacement
+    (tokens present but whose value was empty string).
     REF_ID: RM_DO178_001
     """
-    # Local alias for namespace-qualified tag lookup
     _qn = qn
 
     def _process_paragraph(para: Any) -> None:
         full_text: str = para.text
-        has_placeholder: bool = False
-
-        for ph in replacements:
-            if ph in full_text:
-                has_placeholder = True
-                break
-
+        has_placeholder: bool = any(ph in full_text for ph in replacements)
         if has_placeholder is False:
             return
 
-        has_any_field: bool = False
-        for r in para.runs:
-            if (r._r.find(_qn("w:fldChar")) is not None or
-                    r._r.find(_qn("w:instrText")) is not None):
-                has_any_field = True
-                break
+        has_any_field: bool = any(
+            r._r.find(_qn("w:fldChar")) is not None or
+            r._r.find(_qn("w:instrText")) is not None
+            for r in para.runs
+        )
 
         if has_any_field is True:
             runs: List[Any] = para.runs
@@ -230,7 +222,6 @@ def _replace_placeholders_in_doc(
                 if is_field is True:
                     i += 1
                     continue
-
                 j: int = i + 1
                 while j < len(runs):
                     r_j: Any = runs[j]
@@ -238,40 +229,36 @@ def _replace_placeholders_in_doc(
                             r_j._r.find(_qn("w:instrText")) is not None):
                         break
                     j += 1
-
                 if j > i + 1:
                     combined: str = "".join(runs[k].text for k in range(i, j))
-                    for placeholder, value in replacements.items():
-                        combined = combined.replace(placeholder, value)
+                    for ph, val in replacements.items():
+                        combined = combined.replace(ph, val)
                     runs[i].text = combined
                     for k in range(i + 1, j):
                         runs[k].text = ""
                 else:
-                    for placeholder, value in replacements.items():
-                        if placeholder in run.text:
-                            run.text = run.text.replace(placeholder, value)
+                    for ph, val in replacements.items():
+                        if ph in run.text:
+                            run.text = run.text.replace(ph, val)
                 i = j
         else:
             if len(para.runs) > 0:
                 combined_all: str = "".join(r.text for r in para.runs)
-                for placeholder, value in replacements.items():
-                    combined_all = combined_all.replace(placeholder, value)
+                for ph, val in replacements.items():
+                    combined_all = combined_all.replace(ph, val)
                 para.runs[0].text = combined_all
                 for run in para.runs[1:]:
                     run.text = ""
 
-    # Body paragraphs
     for para in doc.paragraphs:
         _process_paragraph(para)
 
-    # Table cells -- placeholders in tables are not covered by doc.paragraphs
     for table in doc.tables:
         for row in table.rows:
             for cell in row.cells:
                 for para in cell.paragraphs:
                     _process_paragraph(para)
 
-    # Headers and footers across all sections
     for section in doc.sections:
         for hdr in [section.header, section.first_page_header]:
             if hdr is not None:
@@ -282,81 +269,44 @@ def _replace_placeholders_in_doc(
                 for para in ftr.paragraphs:
                     _process_paragraph(para)
 
-    # ---------------------------------------------------------------------------
-    # Unfilled placeholder check -- scans the same three zones as the replacement
-    # pass: body paragraphs, table cells, and headers/footers.
-    # Previously only scanned body paragraphs (fix 9). REF_ID: RM_DO178_001
-    # ---------------------------------------------------------------------------
+    # Safety check: report any token that survived replacement with empty value
     unfilled: List[str] = []
-
-    def _collect_text_from_zone(paragraphs: Any) -> str:
-        return "\n".join(p.text for p in paragraphs)
-
-    # Collect text from all zones
-    all_text_parts: List[str] = []
-
-    all_text_parts.append(_collect_text_from_zone(doc.paragraphs))
-
-    for table in doc.tables:
-        for row in table.rows:
-            for cell in row.cells:
-                all_text_parts.append(_collect_text_from_zone(cell.paragraphs))
-
-    for section in doc.sections:
-        for hdr in [section.header, section.first_page_header]:
-            if hdr is not None:
-                all_text_parts.append(_collect_text_from_zone(hdr.paragraphs))
-        for ftr in [section.footer, section.first_page_footer]:
-            if ftr is not None:
-                all_text_parts.append(_collect_text_from_zone(ftr.paragraphs))
-
-    full_doc_text: str = "\n".join(all_text_parts)
-
-    for ph in replacements:
-        if ph in full_doc_text and len(replacements[ph]) == 0:
+    all_text: str = "\n".join(
+        p.text for p in doc.paragraphs
+    )
+    for ph, val in replacements.items():
+        if ph in all_text and len(val) == 0:
             unfilled.append(ph)
-
     return unfilled
 
 
 # ---------------------------------------------------------------------------
-# Public API
+# Public API -- generate()
+# REF_ID: RM_DO178_001, RM_NIST_001
 # ---------------------------------------------------------------------------
 
 def generate(
     formatted_doc: Any,
-    metadata: CoverMetadata,
+    metadata: Dict[str, str],
     source_path: Path,
 ) -> GeneratorResult:
     """
-    Inject cover page metadata into the formatted document by replacing
-    all [[PLACEHOLDER]] tokens with real values.
+    Inject cover page values into the formatted document.
 
-    The TOC field ([[CONTENTS]] heading + Word TOC field) is already
-    present in the template structure -- Word will update it when the
-    user opens the document and presses Ctrl+A then F9, or when the
-    document is opened in a Word version that auto-updates fields.
-    We do not attempt to programmatically update the TOC field here
-    because python-docx does not have reliable cross-platform TOC
-    field update support.
+    metadata is a Dict[str, str] mapping [[TOKEN]] -> value, produced by
+    prompt_cover_metadata(). Structural markers are added here and always
+    replaced with empty string.
 
     REF_ID: RM_DO178_001, RM_NIST_001
     """
     if formatted_doc is None:
         return GeneratorResult(error="No formatted document provided.")
 
-    # Fill in defaults for any empty metadata fields
-    metadata = _fill_metadata_defaults(metadata, source_path)
+    # Build the full replacement dict.
+    # Structural markers are always cleared -- they must not appear in output.
+    replacements: Dict[str, str] = {ph: "" for ph in _STRUCTURAL_PLACEHOLDERS}
+    replacements.update(metadata)
 
-    # Build the replacement dict from metadata
-    replacements: Dict[str, str] = {}
-    for placeholder, attr_name in _PLACEHOLDER_MAP.items():
-        if attr_name is None:
-            replacements[placeholder] = ""
-        else:
-            replacements[placeholder] = getattr(metadata, attr_name, "")
-
-    # Apply replacements across the whole document
     unfilled: List[str] = _replace_placeholders_in_doc(formatted_doc, replacements)
 
     return GeneratorResult(
@@ -367,83 +317,78 @@ def generate(
 
 
 # ---------------------------------------------------------------------------
-# Cover metadata prompt helper
+# Public API -- prompt_cover_metadata()
+# REF_ID: RM_NIST_001, RM_HCI_002
 # ---------------------------------------------------------------------------
 
-def prompt_cover_metadata(source_path: Path) -> CoverMetadata:
+def prompt_cover_metadata(
+    source_path: Path,
+    formatted_doc: Any = None,
+) -> Dict[str, str]:
     """
-    Prompt the user for cover page metadata fields.
-    Returns a CoverMetadata object with all fields filled or defaulted.
+    Prompt the user for cover page values and return a Dict[str, str]
+    mapping [[TOKEN]] -> user-supplied value.
 
-    Each field shows its default value so the user can press Enter to accept.
-    REF_ID: RM_NIST_001 -- user authorizes cover page content before generation
+    Tier 1 (always prompted):
+      [[DOCUMENT_TITLE]] -- defaults to source filename stem
+      [[AUTHOR_NAME]]    -- no default, user must supply or press Enter
+
+    Tier 2 (template-driven):
+      Every other [[TOKEN]] found in formatted_doc is prompted by its
+      display name. Known tokens get smart defaults. Unknown custom
+      tokens (e.g. [[EMPLOYEE_ID]]) are prompted the same way.
+      User may press Enter to leave any Tier 2 field blank.
+
+    Structural markers are excluded from prompting entirely.
+    REF_ID: RM_NIST_001, RM_DO178_001
     """
     from ui.messages import (
         MSG_COVER_PAGE_INTRO,
-        MSG_COVER_TITLE_PROMPT,
-        MSG_COVER_DATE_PROMPT,
-        MSG_COVER_AUTHOR_PROMPT,
-        MSG_COVER_ORG_PROMPT,
-        fmt, LABEL_CONFIRM, LABEL_INFO,
+        fmt, LABEL_CONFIRM,
     )
 
     print(MSG_COVER_PAGE_INTRO)
 
-    default_title: str = (
-        source_path.stem.replace("_", " ").replace("-", " ").title()
-    )
-    import platform as _platform
-    _day_fmt: str = "%#d" if _platform.system() == "Windows" else "%-d"
-    default_date: str = datetime.now().strftime(_day_fmt + " %B %Y")
-
-    def ask(prompt: str, default: str = "") -> str:
+    def ask(label: str, default: str = "") -> str:
+        """Prompt for one field. Returns user input or default on Enter."""
         if len(default) > 0:
-            print(prompt + " [" + default + "]")
+            print(fmt(LABEL_CONFIRM, label + " [" + default + "]"))
         else:
-            print(prompt)
+            print(fmt(LABEL_CONFIRM, label + " (or press Enter to skip):"))
         try:
             val: str = input("> ").strip()
         except (KeyboardInterrupt, EOFError):
             val = ""
+        return val if len(val) > 0 else default
 
-        if len(val) > 0:
-            return val
-        return default
+    result: Dict[str, str] = {}
 
-    doc_type: str    = ask(
-        fmt(LABEL_CONFIRM, "Document type (e.g. Research Report, Technical Report):"),
-        "Report"
-    )
-    title: str       = ask(MSG_COVER_TITLE_PROMPT, default_title)
-    subtitle: str    = ask(fmt(LABEL_CONFIRM, "Subtitle (or press Enter to leave blank):"), "")
-    institution: str = ask(fmt(LABEL_CONFIRM, "Institution name (or press Enter to skip):"), "")
-    faculty: str     = ask(fmt(LABEL_CONFIRM, "Faculty / Department (or press Enter to skip):"), "")
-    author: str      = ask(MSG_COVER_AUTHOR_PROMPT, "")
-    student_id: str  = ask(fmt(LABEL_CONFIRM, "Student ID (or press Enter to skip):"), "")
-    supervisor: str  = ask(fmt(LABEL_CONFIRM, "Supervisor name (or press Enter to skip):"), "")
-    course_code: str = ask(fmt(LABEL_CONFIRM, "Course code (or press Enter to skip):"), "")
-    course_name: str = ask(fmt(LABEL_CONFIRM, "Course name (or press Enter to skip):"), "")
-    org: str         = ask(MSG_COVER_ORG_PROMPT, institution)
-    date: str        = ask(MSG_COVER_DATE_PROMPT, default_date)
-    conf_label: str  = ask(
-        fmt(LABEL_CONFIRM, "Confidentiality label (CONFIDENTIAL / PUBLIC / INTERNAL):"),
-        "INTERNAL"
-    )
+    # --- Tier 1: always required ---
+    title_default: str = _get_default(_REQUIRED_PLACEHOLDER_TITLE, source_path)
+    result[_REQUIRED_PLACEHOLDER_TITLE] = ask("Document title", title_default)
+    result[_REQUIRED_PLACEHOLDER_AUTHOR] = ask("Author name", "")
 
-    return CoverMetadata(
-        document_type=doc_type,
-        document_title=title,
-        subtitle=subtitle,
-        author_name=author,
-        department_organisation=org,
-        month_year=date,
-        organisation=org,
-        confidentiality_label=conf_label,
-        institution_name=institution,
-        faculty_department=faculty,
-        student_id=student_id,
-        supervisor_name=supervisor,
-        course_code=course_code,
-        course_name=course_name,
-        submission_date=date,
-    )
+    if formatted_doc is None:
+        return result
+
+    # --- Discover all tokens in the template ---
+    all_tokens: Set[str] = _scan_placeholders(formatted_doc)
+
+    # Tier 2: everything except structural markers and already-prompted Tier 1
+    skip: Set[str] = _STRUCTURAL_PLACEHOLDERS | {
+        _REQUIRED_PLACEHOLDER_TITLE,
+        _REQUIRED_PLACEHOLDER_AUTHOR,
+    }
+    tier2: List[str] = sorted(t for t in all_tokens if t not in skip)
+
+    if len(tier2) > 0:
+        print(fmt(LABEL_CONFIRM,
+            "Additional fields found in your template. "
+            "Press Enter to skip any field."))
+
+    for token in tier2:
+        default: str = _get_default(token, source_path)
+        label: str   = _display_name(token)
+        result[token] = ask(label, default)
+
+    return result

@@ -1,12 +1,12 @@
 # Source Trace:
-# File: single_v0.2.py
+# File: single_v0.4.py
 # Knowledge Files: CodeSourceDB v3.6, SyntaxBiasDB v2.3, HumanSyntaxDB v1.2
 # REF_IDs: RM_DO178_001, RM_NIST_001, RM_HCI_002, WEB_PY_001, WEB_PY_002,
 #          WEB_PY_003, WEB_PY_004, RM_HCI_004
 # Logic: Orchestrates the single file formatting pipeline with explicitly typed
 #        variables, strict checks, and path sanitization.
-#        v0.2 -- get_template_path wrapped in try/except ValueError (fix 1).
-#                clean_path imported from utils.py instead of duplicated locally (fix 7).
+#        v0.4 -- CoverMetadata removed. metadata typed as Dict[str, str] to
+#                match generator.py v0.4 dynamic placeholder architecture.
 
 """
 Rhema -- Auto Formatter
@@ -27,21 +27,19 @@ Governing standards:
   POSIX.1-2017 path sanitation  -- REF_ID: RM_HCI_004
 """
 
-import sys
 from pathlib import Path
-from typing import Optional, List, Dict, Any
+from typing import Optional, List, Dict
 
 from core.detector import detect, DetectionResult, ImplicitElement
 from ui.preview import run_preview, PreviewResult
 from core.formatter import format_document, FormatterResult
-from core.generator import generate, prompt_cover_metadata, GeneratorResult, CoverMetadata
+from core.generator import generate, prompt_cover_metadata, GeneratorResult
 from core.writer import write_document, WriterResult
 from storage.template_store import (
     ensure_library_exists,
     list_templates,
     get_template_path,
     save_template,
-    template_exists,
 )
 from config.constants import (
     SUPPORTED_INPUT_EXTENSIONS,
@@ -315,13 +313,9 @@ def run_single_mode() -> None:
         print(fmt(LABEL_INFO, "Document structure is fully declared. No review needed."))
 
     # -----------------------------------------------------------------------
-    # STATE 6: Collect cover page metadata
-    # REF_ID: RM_NIST_001
-    # -----------------------------------------------------------------------
-    metadata: CoverMetadata = prompt_cover_metadata(source_path)
-
-    # -----------------------------------------------------------------------
-    # STATE 7: Apply template formatting
+    # STATE 6: Apply template formatting
+    # Must run before metadata prompt so formatted_doc is available for
+    # placeholder scanning. REF_ID: RM_DO178_001
     # -----------------------------------------------------------------------
     print(msg_applying_template(template_path.stem))
     fmt_result: FormatterResult = format_document(source_path, template_path, confirmed_elements)
@@ -339,6 +333,14 @@ def run_single_mode() -> None:
         print(fmt(LABEL_INFO,
             "Some styles in your document were not found in the template "
             "and have been set to Normal: " + ", ".join(unmapped_styles)))
+
+    # -----------------------------------------------------------------------
+    # STATE 7: Collect cover page metadata
+    # Runs after formatting so formatted_doc can be scanned for present
+    # [[PLACEHOLDER]] tokens -- only those fields are prompted.
+    # REF_ID: RM_NIST_001, RM_DO178_001
+    # -----------------------------------------------------------------------
+    metadata: Dict[str, str] = prompt_cover_metadata(source_path, fmt_result.formatted_doc)
 
     # -----------------------------------------------------------------------
     # STATE 8: Generate cover page and TOC
@@ -359,9 +361,8 @@ def run_single_mode() -> None:
     # STATE 9: Write output file
     # -----------------------------------------------------------------------
     print(MSG_SAVING_DOC)
-    output_filename: Optional[str] = (
-        metadata.document_title if len(metadata.document_title) > 0 else None
-    )
+    _title_val: str = metadata.get("[[DOCUMENT_TITLE]]", "")
+    output_filename: Optional[str] = _title_val if len(_title_val) > 0 else None
     write_result: WriterResult = write_document(
         gen_result.final_doc, source_path, output_dir, output_filename
     )

@@ -1,10 +1,9 @@
 # Source Trace:
-# File: messages_v0.4.py
+# File: messages_v0.5.py
 # Knowledge Files: CodeSourceDB v3.6, SyntaxBiasDB v2.3, HumanSyntaxDB v1.2
 # REF_IDs: RM_DO178_001, RM_ACC_001, RM_VIS_001, RM_HCI_002, WEB_PY_003
 # Logic: Centralized message registry with strictly typed strings and helper functions.
-#        v0.4 -- PREVIEW_PROMPT corrected to accurately describe correction input.
-#                LIBRARY_NAME_COLUMN_WIDTH constant replaces bare magic number 30.
+#        v0.5 -- Added sample mode message strings for the format template generator.
 
 """
 Rhema -- Auto Formatter
@@ -82,13 +81,14 @@ MAIN_MENU: str = (
     "  1. Format a document\n"
     "  2. Format multiple documents (batch)\n"
     "  3. Manage my templates\n"
-    "  4. Exit\n\n"
+    "  4. Get a format template\n"
+    "  5. Exit\n\n"
     "Type a number and press Enter."
 )
 
 MAIN_MENU_INVALID: str = fmt(
     LABEL_ERROR,
-    "That is not a valid option. Please type 1, 2, 3, or 4."
+    "That is not a valid option. Please type 1, 2, 3, 4, or 5."
 )
 
 # ---------------------------------------------------------------------------
@@ -417,3 +417,39 @@ def msg_starting_single(filename: str) -> str:
 
 def msg_starting_batch(count: int) -> str:
     return fmt(LABEL_INFO, "Starting batch. " + str(count) + " documents to process.")
+
+
+# ---------------------------------------------------------------------------
+# Sample template generator mode messages
+# REF_ID: RM_HCI_002, RM_DO178_001
+# ---------------------------------------------------------------------------
+
+MSG_SAMPLE_INTRO: str = fmt(
+    LABEL_INFO,
+    "Rhema will generate a format sample document.\n"
+    "        Open it in Word, apply your styling, save it, then feed it\n"
+    "        back to Rhema as a template."
+)
+
+MSG_SAMPLE_GENERATING: str = fmt(LABEL_INFO, "Generating format sample ...")
+
+MSG_SAMPLE_SAVE_PROMPT: str = fmt(
+    LABEL_CONFIRM,
+    "Would you like to add this sample to your template library now?\n"
+    "        Type 'yes' to save it, or press Enter to skip."
+)
+
+MSG_SAMPLE_SKIPPED: str = fmt(
+    LABEL_INFO,
+    "Sample not added to library. You can add it later via Manage Templates."
+)
+
+MSG_SAMPLE_WRITE_ERROR: str = fmt(
+    LABEL_ERROR,
+    "Rhema could not write the sample file. Check that the output folder is writable."
+)
+
+
+def msg_sample_done(path: str) -> str:
+    """Confirm the sample was written and tell the user where it is."""
+    return fmt(LABEL_OK, "Format sample saved to:\n        " + path)

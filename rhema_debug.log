@@ -2751,3 +2751,1045 @@
 2026-06-22 04:01:58  DEBUG      doc.Close() OK
 2026-06-22 04:01:58  DEBUG      word.Quit() OK
 2026-06-22 04:01:59  DEBUG      CoUninitialize OK
+2026-06-22 04:28:48  INFO     ============================================================
+2026-06-22 04:28:48  INFO     COM session START: Itc4214 Iasonpapadopoulos Midtermprojectreport_1.docx
+2026-06-22 04:28:48  DEBUG      Platform: Windows
+2026-06-22 04:28:48  DEBUG      pywin32 imported OK
+2026-06-22 04:28:48  DEBUG      CoInitialize OK
+2026-06-22 04:28:48  DEBUG      Word.Application dispatched OK
+2026-06-22 04:28:48  DEBUG      word.Options.UpdateLinksAtOpen = False OK
+2026-06-22 04:28:48  DEBUG      word.Options.ConfirmConversions = False OK
+2026-06-22 04:28:48  DEBUG      word.DisplayAlerts = 0 OK
+2026-06-22 04:28:49  DEBUG      Document opened OK: D:\.IT_Projects\_GIT_hub\CLI - Rhema\output\Itc4214 Iasonpapadopoulos Midtermprojectreport_1.docx
+2026-06-22 04:28:49  INFO       Applying professional formatting rules ...
+2026-06-22 04:28:49  DEBUG      Total paragraphs in document: 203
+2026-06-22 04:28:49  DEBUG      Body end:   para 29 (before 'CONTENTS' at 30)
+2026-06-22 04:28:50  DEBUG      Body start: para 41 (Heading 1: 'Section 1: Technical Code Analysis')
+2026-06-22 04:28:53  DEBUG      Body end:   para 180 (before 'REFERENCES' at 181)
+2026-06-22 04:28:53  DEBUG      Body section: paras 41 to 180
+2026-06-22 04:28:53  DEBUG      Para 41: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305026839216>' object has no attribute 'ListId'
+2026-06-22 04:28:53  DEBUG      Para 41 [Heading 1]: KeepWithNext -1 -> -1  'Section 1: Technical Code Analysis'
+2026-06-22 04:28:53  DEBUG      Para 42: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305026715280>' object has no attribute 'ListId'
+2026-06-22 04:28:53  DEBUG      Para 42 [Heading 2]: KeepWithNext -1 -> -1  '1.1 Project Architecture'
+2026-06-22 04:28:53  DEBUG      Para 43: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305026715280>' object has no attribute 'ListId'
+2026-06-22 04:28:53  DEBUG      Para 44: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305024687632>' object has no attribute 'ListId'
+2026-06-22 04:28:54  DEBUG      Para 45: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305024687632>' object has no attribute 'ListId'
+2026-06-22 04:28:54  DEBUG      Para 45 [Heading 1]: KeepWithNext -1 -> -1  'Table 1. File Organisation and Governing'
+2026-06-22 04:28:54  DEBUG      Para 46: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305031869584>' object has no attribute 'ListId'
+2026-06-22 04:28:54  DEBUG      Para 47: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305032044624>' object has no attribute 'ListId'
+2026-06-22 04:28:54  DEBUG      Para 48: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305032011856>' object has no attribute 'ListId'
+2026-06-22 04:28:54  DEBUG      Para 49: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305032044624>' object has no attribute 'ListId'
+2026-06-22 04:28:54  WARNING    Para 49: KeepTogether SET but read back False!
+2026-06-22 04:28:54  DEBUG      Para 50: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305032044624>' object has no attribute 'ListId'
+2026-06-22 04:28:54  DEBUG      Para 51: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305024909600>' object has no attribute 'ListId'
+2026-06-22 04:28:54  DEBUG      Para 52: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305024909600>' object has no attribute 'ListId'
+2026-06-22 04:28:55  DEBUG      Para 53: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305025236944>' object has no attribute 'ListId'
+2026-06-22 04:28:55  WARNING    Para 53: KeepTogether SET but read back False!
+2026-06-22 04:28:55  DEBUG      Para 54: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305025236944>' object has no attribute 'ListId'
+2026-06-22 04:28:55  DEBUG      Para 55: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305024627872>' object has no attribute 'ListId'
+2026-06-22 04:28:55  DEBUG      Para 56: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305015984208>' object has no attribute 'ListId'
+2026-06-22 04:28:55  DEBUG      Para 57: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305015984208>' object has no attribute 'ListId'
+2026-06-22 04:28:55  WARNING    Para 57: KeepTogether SET but read back False!
+2026-06-22 04:28:55  DEBUG      Para 58: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305024985232>' object has no attribute 'ListId'
+2026-06-22 04:28:55  DEBUG      Para 59: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305024985232>' object has no attribute 'ListId'
+2026-06-22 04:28:55  DEBUG      Para 60: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305027303984>' object has no attribute 'ListId'
+2026-06-22 04:28:55  DEBUG      Para 61: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305027303984>' object has no attribute 'ListId'
+2026-06-22 04:28:56  WARNING    Para 61: KeepTogether SET but read back False!
+2026-06-22 04:28:56  DEBUG      Para 62: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305026650000>' object has no attribute 'ListId'
+2026-06-22 04:28:56  DEBUG      Para 63: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305031881552>' object has no attribute 'ListId'
+2026-06-22 04:28:56  DEBUG      Para 64: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305031881552>' object has no attribute 'ListId'
+2026-06-22 04:28:56  DEBUG      Para 65: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305026824624>' object has no attribute 'ListId'
+2026-06-22 04:28:56  WARNING    Para 65: KeepTogether SET but read back False!
+2026-06-22 04:28:56  DEBUG      Para 66: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305026824624>' object has no attribute 'ListId'
+2026-06-22 04:28:56  DEBUG      Para 67: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305031910512>' object has no attribute 'ListId'
+2026-06-22 04:28:56  DEBUG      Para 68: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305031912816>' object has no attribute 'ListId'
+2026-06-22 04:28:56  DEBUG      Para 69: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305026962720>' object has no attribute 'ListId'
+2026-06-22 04:28:56  WARNING    Para 69: KeepTogether SET but read back False!
+2026-06-22 04:28:57  DEBUG      Para 70: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305031789200>' object has no attribute 'ListId'
+2026-06-22 04:28:57  DEBUG      Para 71: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305028254816>' object has no attribute 'ListId'
+2026-06-22 04:28:57  DEBUG      Para 72: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305026962720>' object has no attribute 'ListId'
+2026-06-22 04:28:57  DEBUG      Para 73: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305031789200>' object has no attribute 'ListId'
+2026-06-22 04:28:57  WARNING    Para 73: KeepTogether SET but read back False!
+2026-06-22 04:28:57  DEBUG      Para 74: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305028254816>' object has no attribute 'ListId'
+2026-06-22 04:28:57  DEBUG      Para 75: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305026962720>' object has no attribute 'ListId'
+2026-06-22 04:28:57  DEBUG      Para 76: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305031789200>' object has no attribute 'ListId'
+2026-06-22 04:28:57  DEBUG      Para 77: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305028254816>' object has no attribute 'ListId'
+2026-06-22 04:28:57  WARNING    Para 77: KeepTogether SET but read back False!
+2026-06-22 04:28:57  DEBUG      Para 78: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305031789200>' object has no attribute 'ListId'
+2026-06-22 04:28:58  DEBUG      Para 78 [Heading 2]: KeepWithNext -1 -> -1  '1.2 Inline CSS Justification'
+2026-06-22 04:28:58  DEBUG      Para 79: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305026962720>' object has no attribute 'ListId'
+2026-06-22 04:28:58  DEBUG      Para 80: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305028254816>' object has no attribute 'ListId'
+2026-06-22 04:28:58  DEBUG      Para 80 [Heading 1]: KeepWithNext -1 -> -1  'Table 2. Inline CSS Categories and Justi'
+2026-06-22 04:28:58  DEBUG      Para 81: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305031789200>' object has no attribute 'ListId'
+2026-06-22 04:28:58  DEBUG      Para 82: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305026962720>' object has no attribute 'ListId'
+2026-06-22 04:28:58  DEBUG      Para 83: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305028254816>' object has no attribute 'ListId'
+2026-06-22 04:28:58  WARNING    Para 83: KeepTogether SET but read back False!
+2026-06-22 04:28:58  DEBUG      Para 84: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305031789200>' object has no attribute 'ListId'
+2026-06-22 04:28:58  DEBUG      Para 85: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305026962720>' object has no attribute 'ListId'
+2026-06-22 04:28:58  DEBUG      Para 86: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305028254816>' object has no attribute 'ListId'
+2026-06-22 04:28:58  WARNING    Para 86: KeepTogether SET but read back False!
+2026-06-22 04:28:58  DEBUG      Para 87: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305026962720>' object has no attribute 'ListId'
+2026-06-22 04:28:59  DEBUG      Para 88: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305031789200>' object has no attribute 'ListId'
+2026-06-22 04:28:59  DEBUG      Para 89: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305028254816>' object has no attribute 'ListId'
+2026-06-22 04:28:59  WARNING    Para 89: KeepTogether SET but read back False!
+2026-06-22 04:28:59  DEBUG      Para 90: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305031789200>' object has no attribute 'ListId'
+2026-06-22 04:28:59  DEBUG      Para 91: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305026962720>' object has no attribute 'ListId'
+2026-06-22 04:28:59  DEBUG      Para 92: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305028254816>' object has no attribute 'ListId'
+2026-06-22 04:28:59  WARNING    Para 92: KeepTogether SET but read back False!
+2026-06-22 04:28:59  DEBUG      Para 93: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305031789200>' object has no attribute 'ListId'
+2026-06-22 04:28:59  DEBUG      Para 93 [Heading 2]: KeepWithNext -1 -> -1  '1.3 Shared Layer: common.js'
+2026-06-22 04:28:59  DEBUG      Para 94: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305026962720>' object has no attribute 'ListId'
+2026-06-22 04:28:59  DEBUG      Para 95: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305028254816>' object has no attribute 'ListId'
+2026-06-22 04:28:59  DEBUG      Para 96: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305031789200>' object has no attribute 'ListId'
+2026-06-22 04:29:00  DEBUG      Para 97: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305026962720>' object has no attribute 'ListId'
+2026-06-22 04:29:00  DEBUG      Para 97 [Heading 2]: KeepWithNext -1 -> -1  '1.4 Page-Specific Behaviour'
+2026-06-22 04:29:00  DEBUG      Para 98: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305028254816>' object has no attribute 'ListId'
+2026-06-22 04:29:00  DEBUG      Para 98 [Heading 1]: KeepWithNext -1 -> -1  'Table 3. Page Features and Implementatio'
+2026-06-22 04:29:00  DEBUG      Para 99: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305031789200>' object has no attribute 'ListId'
+2026-06-22 04:29:00  DEBUG      Para 100: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305026962720>' object has no attribute 'ListId'
+2026-06-22 04:29:00  DEBUG      Para 101: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305028254816>' object has no attribute 'ListId'
+2026-06-22 04:29:00  DEBUG      Para 102: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305031789200>' object has no attribute 'ListId'
+2026-06-22 04:29:00  WARNING    Para 102: KeepTogether SET but read back False!
+2026-06-22 04:29:00  DEBUG      Para 103: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305026962720>' object has no attribute 'ListId'
+2026-06-22 04:29:00  DEBUG      Para 104: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305031789200>' object has no attribute 'ListId'
+2026-06-22 04:29:01  DEBUG      Para 105: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305028254816>' object has no attribute 'ListId'
+2026-06-22 04:29:01  DEBUG      Para 106: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305026962720>' object has no attribute 'ListId'
+2026-06-22 04:29:01  WARNING    Para 106: KeepTogether SET but read back False!
+2026-06-22 04:29:01  DEBUG      Para 107: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305031789200>' object has no attribute 'ListId'
+2026-06-22 04:29:01  DEBUG      Para 108: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305028254816>' object has no attribute 'ListId'
+2026-06-22 04:29:01  DEBUG      Para 109: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305026962720>' object has no attribute 'ListId'
+2026-06-22 04:29:01  DEBUG      Para 110: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305031789200>' object has no attribute 'ListId'
+2026-06-22 04:29:01  WARNING    Para 110: KeepTogether SET but read back False!
+2026-06-22 04:29:01  DEBUG      Para 111: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305028254816>' object has no attribute 'ListId'
+2026-06-22 04:29:01  DEBUG      Para 112: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305026962720>' object has no attribute 'ListId'
+2026-06-22 04:29:02  DEBUG      Para 113: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305031789200>' object has no attribute 'ListId'
+2026-06-22 04:29:02  DEBUG      Para 114: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305028254816>' object has no attribute 'ListId'
+2026-06-22 04:29:02  WARNING    Para 114: KeepTogether SET but read back False!
+2026-06-22 04:29:02  DEBUG      Para 115: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305026962720>' object has no attribute 'ListId'
+2026-06-22 04:29:02  DEBUG      Para 116: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305031789200>' object has no attribute 'ListId'
+2026-06-22 04:29:02  DEBUG      Para 117: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305028254816>' object has no attribute 'ListId'
+2026-06-22 04:29:02  DEBUG      Para 118: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305026962720>' object has no attribute 'ListId'
+2026-06-22 04:29:02  WARNING    Para 118: KeepTogether SET but read back False!
+2026-06-22 04:29:02  DEBUG      Para 119: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305031789200>' object has no attribute 'ListId'
+2026-06-22 04:29:02  DEBUG      Para 119 [Heading 3]: KeepWithNext -1 -> -1  '1.4.1 Mouse-Tracking Parallax (index.js)'
+2026-06-22 04:29:02  DEBUG      Para 120: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305028254816>' object has no attribute 'ListId'
+2026-06-22 04:29:02  DEBUG      Para 121: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305026962720>' object has no attribute 'ListId'
+2026-06-22 04:29:03  DEBUG      Para 121 [Heading 3]: KeepWithNext -1 -> -1  '1.4.2 Audio Player (index.js)'
+2026-06-22 04:29:03  DEBUG      Para 122: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305031789200>' object has no attribute 'ListId'
+2026-06-22 04:29:03  DEBUG      Para 123: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305028254816>' object has no attribute 'ListId'
+2026-06-22 04:29:03  DEBUG      Para 123 [Heading 2]: KeepWithNext -1 -> -1  '1.5 Side Quests: The Quest State Machine'
+2026-06-22 04:29:03  DEBUG      Para 124: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305026962720>' object has no attribute 'ListId'
+2026-06-22 04:29:03  DEBUG      Para 125: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305031789200>' object has no attribute 'ListId'
+2026-06-22 04:29:03  DEBUG      Para 126: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305028254816>' object has no attribute 'ListId'
+2026-06-22 04:29:03  DEBUG      Para 127: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305026962720>' object has no attribute 'ListId'
+2026-06-22 04:29:03  DEBUG      Para 127 [Heading 2]: KeepWithNext -1 -> -1  '1.6 Side Quests: The SVG Donut Chart'
+2026-06-22 04:29:03  DEBUG      Para 128: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305031789200>' object has no attribute 'ListId'
+2026-06-22 04:29:03  DEBUG      Para 129: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305028254816>' object has no attribute 'ListId'
+2026-06-22 04:29:04  DEBUG      Para 130: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305026962720>' object has no attribute 'ListId'
+2026-06-22 04:29:04  DEBUG      Para 131: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305031789200>' object has no attribute 'ListId'
+2026-06-22 04:29:04  DEBUG      Para 132: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305028254816>' object has no attribute 'ListId'
+2026-06-22 04:29:04  DEBUG      Para 132 [Heading 2]: KeepWithNext -1 -> -1  '1.7 Colour Semantics'
+2026-06-22 04:29:04  DEBUG      Para 133: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305026962720>' object has no attribute 'ListId'
+2026-06-22 04:29:04  DEBUG      Para 133 [Heading 1]: KeepWithNext -1 -> -1  'Table 4. Colour-Semantic Mapping'
+2026-06-22 04:29:04  DEBUG      Para 134: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305031789200>' object has no attribute 'ListId'
+2026-06-22 04:29:04  DEBUG      Para 135: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305028254816>' object has no attribute 'ListId'
+2026-06-22 04:29:04  DEBUG      Para 136: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305026962720>' object has no attribute 'ListId'
+2026-06-22 04:29:04  DEBUG      Para 137: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305031789200>' object has no attribute 'ListId'
+2026-06-22 04:29:05  WARNING    Para 137: KeepTogether SET but read back False!
+2026-06-22 04:29:05  DEBUG      Para 138: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305028254816>' object has no attribute 'ListId'
+2026-06-22 04:29:05  DEBUG      Para 139: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305031789200>' object has no attribute 'ListId'
+2026-06-22 04:29:05  DEBUG      Para 140: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305026962720>' object has no attribute 'ListId'
+2026-06-22 04:29:05  DEBUG      Para 141: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305028254816>' object has no attribute 'ListId'
+2026-06-22 04:29:05  WARNING    Para 141: KeepTogether SET but read back False!
+2026-06-22 04:29:05  DEBUG      Para 142: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305031789200>' object has no attribute 'ListId'
+2026-06-22 04:29:05  DEBUG      Para 143: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305026962720>' object has no attribute 'ListId'
+2026-06-22 04:29:05  DEBUG      Para 144: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305028254816>' object has no attribute 'ListId'
+2026-06-22 04:29:05  DEBUG      Para 145: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305031789200>' object has no attribute 'ListId'
+2026-06-22 04:29:06  WARNING    Para 145: KeepTogether SET but read back False!
+2026-06-22 04:29:06  DEBUG      Para 146: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305028254816>' object has no attribute 'ListId'
+2026-06-22 04:29:06  DEBUG      Para 147: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305026962720>' object has no attribute 'ListId'
+2026-06-22 04:29:06  DEBUG      Para 148: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305031789200>' object has no attribute 'ListId'
+2026-06-22 04:29:06  DEBUG      Para 149: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305028254816>' object has no attribute 'ListId'
+2026-06-22 04:29:06  WARNING    Para 149: KeepTogether SET but read back False!
+2026-06-22 04:29:06  DEBUG      Para 150: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305031789200>' object has no attribute 'ListId'
+2026-06-22 04:29:06  DEBUG      Para 151: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305026962720>' object has no attribute 'ListId'
+2026-06-22 04:29:06  DEBUG      Para 152: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305028254816>' object has no attribute 'ListId'
+2026-06-22 04:29:06  DEBUG      Para 152 [Heading 1]: KeepWithNext -1 -> -1  'Section 2: Development Process'
+2026-06-22 04:29:06  DEBUG      Para 153: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305031789200>' object has no attribute 'ListId'
+2026-06-22 04:29:07  DEBUG      Para 153 [Heading 2]: KeepWithNext -1 -> -1  '2.1 Version Control'
+2026-06-22 04:29:07  DEBUG      Para 154: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305026962720>' object has no attribute 'ListId'
+2026-06-22 04:29:07  DEBUG      Para 155: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305028254816>' object has no attribute 'ListId'
+2026-06-22 04:29:07  DEBUG      Para 155 [Heading 2]: KeepWithNext -1 -> -1  '2.2 Development Timeline'
+2026-06-22 04:29:07  DEBUG      Para 156: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305031789200>' object has no attribute 'ListId'
+2026-06-22 04:29:07  DEBUG      Para 156 [Heading 1]: KeepWithNext -1 -> -1  'Table 5. Development Sessions'
+2026-06-22 04:29:07  DEBUG      Para 157: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305026962720>' object has no attribute 'ListId'
+2026-06-22 04:29:07  DEBUG      Para 158: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305028254816>' object has no attribute 'ListId'
+2026-06-22 04:29:07  DEBUG      Para 159: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305031789200>' object has no attribute 'ListId'
+2026-06-22 04:29:07  WARNING    Para 159: KeepTogether SET but read back False!
+2026-06-22 04:29:07  DEBUG      Para 160: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305026962720>' object has no attribute 'ListId'
+2026-06-22 04:29:07  DEBUG      Para 161: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305028254816>' object has no attribute 'ListId'
+2026-06-22 04:29:08  DEBUG      Para 162: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305031789200>' object has no attribute 'ListId'
+2026-06-22 04:29:08  WARNING    Para 162: KeepTogether SET but read back False!
+2026-06-22 04:29:08  DEBUG      Para 163: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305028254816>' object has no attribute 'ListId'
+2026-06-22 04:29:08  DEBUG      Para 164: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305026962720>' object has no attribute 'ListId'
+2026-06-22 04:29:08  DEBUG      Para 165: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305031789200>' object has no attribute 'ListId'
+2026-06-22 04:29:08  WARNING    Para 165: KeepTogether SET but read back False!
+2026-06-22 04:29:08  DEBUG      Para 166: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305026962720>' object has no attribute 'ListId'
+2026-06-22 04:29:08  DEBUG      Para 167: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305028254816>' object has no attribute 'ListId'
+2026-06-22 04:29:08  DEBUG      Para 168: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305031789200>' object has no attribute 'ListId'
+2026-06-22 04:29:08  WARNING    Para 168: KeepTogether SET but read back False!
+2026-06-22 04:29:08  DEBUG      Para 169: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305026962720>' object has no attribute 'ListId'
+2026-06-22 04:29:08  DEBUG      Para 169 [Heading 2]: KeepWithNext -1 -> -1  '2.3 Significant Technical Challenges'
+2026-06-22 04:29:09  DEBUG      Para 170: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305028254816>' object has no attribute 'ListId'
+2026-06-22 04:29:09  DEBUG      Para 170 [Heading 3]: KeepWithNext -1 -> -1  'Dark and Light Theme (12 Bugs)'
+2026-06-22 04:29:09  DEBUG      Para 171: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305031789200>' object has no attribute 'ListId'
+2026-06-22 04:29:09  DEBUG      Para 172: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305026962720>' object has no attribute 'ListId'
+2026-06-22 04:29:09  DEBUG      Para 172 [Heading 3]: KeepWithNext -1 -> -1  'ARIA Focus Ring (3 Attempts)'
+2026-06-22 04:29:09  DEBUG      Para 173: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305028254816>' object has no attribute 'ListId'
+2026-06-22 04:29:09  DEBUG      Para 174: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305031789200>' object has no attribute 'ListId'
+2026-06-22 04:29:09  DEBUG      Para 174 [Heading 3]: KeepWithNext -1 -> -1  'Chrome Autofill Preview (3 Attempts)'
+2026-06-22 04:29:09  DEBUG      Para 175: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305026962720>' object has no attribute 'ListId'
+2026-06-22 04:29:09  DEBUG      Para 176: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305028254816>' object has no attribute 'ListId'
+2026-06-22 04:29:09  DEBUG      Para 176 [Heading 2]: KeepWithNext -1 -> -1  '2.4 Final Validation'
+2026-06-22 04:29:09  DEBUG      Para 177: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305031789200>' object has no attribute 'ListId'
+2026-06-22 04:29:09  DEBUG      Para 178: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305026962720>' object has no attribute 'ListId'
+2026-06-22 04:29:10  DEBUG      Para 179: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305028254816>' object has no attribute 'ListId'
+2026-06-22 04:29:10  DEBUG      Para 180: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2305031789200>' object has no attribute 'ListId'
+2026-06-22 04:29:10  DEBUG      Pass complete -- KeepWithNext OK:23 FAIL:0 | KeepTogether OK:88 FAIL:25 | ListGroups:0
+2026-06-22 04:29:10  DEBUG      Table 2: 8 rows (char 1752)
+2026-06-22 04:29:10  DEBUG      Table 3: 4 rows (char 3005)
+2026-06-22 04:29:10  DEBUG      Table 4: 5 rows (char 5300)
+2026-06-22 04:29:11  DEBUG      Table 5: 4 rows (char 13573)
+2026-06-22 04:29:11  DEBUG      Table 6: 4 rows (char 14504)
+2026-06-22 04:29:11  DEBUG      Tables done -- rows OK:25 FAIL:0
+2026-06-22 04:29:11  INFO       Formatting rules applied
+2026-06-22 04:29:11  DEBUG      TOC tables found: 1
+2026-06-22 04:29:11  DEBUG      toc.Update() called
+2026-06-22 04:29:11  DEBUG      Fields.Update() called
+2026-06-22 04:29:11  DEBUG      doc.Save() OK
+2026-06-22 04:29:11  INFO       COM session COMPLETE -- toc_updated=True
+2026-06-22 04:29:11  DEBUG      doc.Close() OK
+2026-06-22 04:29:11  DEBUG      word.Quit() OK
+2026-06-22 04:29:11  DEBUG      CoUninitialize OK
+2026-06-22 05:47:44  INFO     ============================================================
+2026-06-22 05:47:44  INFO     COM session START: Itc4214 Iasonpapadopoulos Midtermprojectreport.docx
+2026-06-22 05:47:44  DEBUG      Platform: Windows
+2026-06-22 05:47:44  DEBUG      pywin32 imported OK
+2026-06-22 05:47:44  DEBUG      CoInitialize OK
+2026-06-22 05:47:46  DEBUG      Word.Application dispatched OK
+2026-06-22 05:47:46  DEBUG      word.Options.UpdateLinksAtOpen = False OK
+2026-06-22 05:47:46  DEBUG      word.Options.ConfirmConversions = False OK
+2026-06-22 05:47:46  DEBUG      word.DisplayAlerts = 0 OK
+2026-06-22 05:47:47  DEBUG      Document opened OK: D:\.IT_Projects\_GIT_hub\CLI - Rhema\output\Itc4214 Iasonpapadopoulos Midtermprojectreport.docx
+2026-06-22 05:47:47  INFO       Applying professional formatting rules ...
+2026-06-22 05:47:47  DEBUG      Total paragraphs in document: 250
+2026-06-22 05:47:47  DEBUG      Body start: para 1 (Heading 1: 'COVER PAGE')
+2026-06-22 05:47:48  DEBUG      Body start: para 56 (Heading 1: 'Section 1: Technical Code Analysis')
+2026-06-22 05:47:52  DEBUG      Body section: paras 56 to 250
+2026-06-22 05:47:52  DEBUG      Para 56: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857499148368>' object has no attribute 'ListId'
+2026-06-22 05:47:52  DEBUG      Para 56 [Heading 1]: KeepWithNext -1 -> -1  'Section 1: Technical Code Analysis'
+2026-06-22 05:47:52  DEBUG      Para 57: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857470195856>' object has no attribute 'ListId'
+2026-06-22 05:47:52  DEBUG      Para 57 [Heading 2]: KeepWithNext -1 -> -1  '1.1 Project Architecture'
+2026-06-22 05:47:52  DEBUG      Para 58: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857470195856>' object has no attribute 'ListId'
+2026-06-22 05:47:53  DEBUG      Para 59: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857503146672>' object has no attribute 'ListId'
+2026-06-22 05:47:53  DEBUG      Para 60: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857503146672>' object has no attribute 'ListId'
+2026-06-22 05:47:53  DEBUG      Para 60 [Heading 1]: KeepWithNext -1 -> -1  'Table 1. File Organisation and Governing'
+2026-06-22 05:47:53  DEBUG      Para 61: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857503167344>' object has no attribute 'ListId'
+2026-06-22 05:47:53  DEBUG      Para 62: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857470737088>' object has no attribute 'ListId'
+2026-06-22 05:47:53  DEBUG      Para 63: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857470737088>' object has no attribute 'ListId'
+2026-06-22 05:47:53  DEBUG      Para 64: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857470769744>' object has no attribute 'ListId'
+2026-06-22 05:47:53  WARNING    Para 64: KeepTogether SET but read back False!
+2026-06-22 05:47:53  DEBUG      Para 65: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857470770000>' object has no attribute 'ListId'
+2026-06-22 05:47:53  DEBUG      Para 66: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857469834208>' object has no attribute 'ListId'
+2026-06-22 05:47:53  DEBUG      Para 67: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857469834208>' object has no attribute 'ListId'
+2026-06-22 05:47:53  DEBUG      Para 68: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857470527760>' object has no attribute 'ListId'
+2026-06-22 05:47:53  WARNING    Para 68: KeepTogether SET but read back False!
+2026-06-22 05:47:53  DEBUG      Para 69: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857470527760>' object has no attribute 'ListId'
+2026-06-22 05:47:53  DEBUG      Para 70: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857469770864>' object has no attribute 'ListId'
+2026-06-22 05:47:53  DEBUG      Para 71: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857470248528>' object has no attribute 'ListId'
+2026-06-22 05:47:53  DEBUG      Para 72: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857470248528>' object has no attribute 'ListId'
+2026-06-22 05:47:53  WARNING    Para 72: KeepTogether SET but read back False!
+2026-06-22 05:47:53  DEBUG      Para 73: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857499393760>' object has no attribute 'ListId'
+2026-06-22 05:47:53  DEBUG      Para 74: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857499393760>' object has no attribute 'ListId'
+2026-06-22 05:47:53  DEBUG      Para 75: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857498617936>' object has no attribute 'ListId'
+2026-06-22 05:47:53  DEBUG      Para 76: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857498617936>' object has no attribute 'ListId'
+2026-06-22 05:47:53  WARNING    Para 76: KeepTogether SET but read back False!
+2026-06-22 05:47:53  DEBUG      Para 77: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857497586592>' object has no attribute 'ListId'
+2026-06-22 05:47:53  DEBUG      Para 78: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857503326928>' object has no attribute 'ListId'
+2026-06-22 05:47:53  DEBUG      Para 79: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857503326928>' object has no attribute 'ListId'
+2026-06-22 05:47:53  DEBUG      Para 80: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857470421360>' object has no attribute 'ListId'
+2026-06-22 05:47:53  WARNING    Para 80: KeepTogether SET but read back False!
+2026-06-22 05:47:53  DEBUG      Para 81: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857470421360>' object has no attribute 'ListId'
+2026-06-22 05:47:53  DEBUG      Para 82: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857503204816>' object has no attribute 'ListId'
+2026-06-22 05:47:53  DEBUG      Para 83: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857503207120>' object has no attribute 'ListId'
+2026-06-22 05:47:53  DEBUG      Para 84: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857503084528>' object has no attribute 'ListId'
+2026-06-22 05:47:53  WARNING    Para 84: KeepTogether SET but read back False!
+2026-06-22 05:47:53  DEBUG      Para 85: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857499566528>' object has no attribute 'ListId'
+2026-06-22 05:47:53  DEBUG      Para 86: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857467012320>' object has no attribute 'ListId'
+2026-06-22 05:47:53  DEBUG      Para 87: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857503084528>' object has no attribute 'ListId'
+2026-06-22 05:47:53  DEBUG      Para 88: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857499566528>' object has no attribute 'ListId'
+2026-06-22 05:47:53  WARNING    Para 88: KeepTogether SET but read back False!
+2026-06-22 05:47:53  DEBUG      Para 89: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857467012320>' object has no attribute 'ListId'
+2026-06-22 05:47:54  DEBUG      Para 90: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857503084528>' object has no attribute 'ListId'
+2026-06-22 05:47:54  DEBUG      Para 91: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857499566528>' object has no attribute 'ListId'
+2026-06-22 05:47:54  DEBUG      Para 92: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857497767728>' object has no attribute 'ListId'
+2026-06-22 05:47:54  WARNING    Para 92: KeepTogether SET but read back False!
+2026-06-22 05:47:54  DEBUG      Para 93: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857499566528>' object has no attribute 'ListId'
+2026-06-22 05:47:54  DEBUG      Para 93 [Heading 2]: KeepWithNext -1 -> -1  '1.2 Inline CSS Justification'
+2026-06-22 05:47:54  DEBUG      Para 94: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857467012320>' object has no attribute 'ListId'
+2026-06-22 05:47:54  DEBUG      Para 95: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857497767728>' object has no attribute 'ListId'
+2026-06-22 05:47:54  DEBUG      Para 95 [Heading 1]: KeepWithNext -1 -> -1  'Table 2. Inline CSS Categories and Justi'
+2026-06-22 05:47:54  DEBUG      Para 96: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857499566528>' object has no attribute 'ListId'
+2026-06-22 05:47:54  DEBUG      Para 97: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857467012320>' object has no attribute 'ListId'
+2026-06-22 05:47:54  DEBUG      Para 98: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857497767728>' object has no attribute 'ListId'
+2026-06-22 05:47:54  WARNING    Para 98: KeepTogether SET but read back False!
+2026-06-22 05:47:54  DEBUG      Para 99: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857499566528>' object has no attribute 'ListId'
+2026-06-22 05:47:54  DEBUG      Para 100: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857467012320>' object has no attribute 'ListId'
+2026-06-22 05:47:54  DEBUG      Para 101: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857503084528>' object has no attribute 'ListId'
+2026-06-22 05:47:54  WARNING    Para 101: KeepTogether SET but read back False!
+2026-06-22 05:47:54  DEBUG      Para 102: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857467012320>' object has no attribute 'ListId'
+2026-06-22 05:47:54  DEBUG      Para 103: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857497767728>' object has no attribute 'ListId'
+2026-06-22 05:47:54  DEBUG      Para 104: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857499566528>' object has no attribute 'ListId'
+2026-06-22 05:47:54  WARNING    Para 104: KeepTogether SET but read back False!
+2026-06-22 05:47:54  DEBUG      Para 105: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857497767728>' object has no attribute 'ListId'
+2026-06-22 05:47:54  DEBUG      Para 106: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857503084528>' object has no attribute 'ListId'
+2026-06-22 05:47:54  DEBUG      Para 107: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857499566528>' object has no attribute 'ListId'
+2026-06-22 05:47:54  WARNING    Para 107: KeepTogether SET but read back False!
+2026-06-22 05:47:54  DEBUG      Para 108: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857497767728>' object has no attribute 'ListId'
+2026-06-22 05:47:54  DEBUG      Para 108 [Heading 2]: KeepWithNext -1 -> -1  '1.3 Shared Layer: common.js'
+2026-06-22 05:47:54  DEBUG      Para 109: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857503084528>' object has no attribute 'ListId'
+2026-06-22 05:47:54  DEBUG      Para 110: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857499566528>' object has no attribute 'ListId'
+2026-06-22 05:47:54  DEBUG      Para 111: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857497767728>' object has no attribute 'ListId'
+2026-06-22 05:47:54  DEBUG      Para 112: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857503084528>' object has no attribute 'ListId'
+2026-06-22 05:47:54  DEBUG      Para 112 [Heading 2]: KeepWithNext -1 -> -1  '1.4 Page-Specific Behaviour'
+2026-06-22 05:47:54  DEBUG      Para 113: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857499566528>' object has no attribute 'ListId'
+2026-06-22 05:47:54  DEBUG      Para 113 [Heading 1]: KeepWithNext -1 -> -1  'Table 3. Page Features and Implementatio'
+2026-06-22 05:47:54  DEBUG      Para 114: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857497767728>' object has no attribute 'ListId'
+2026-06-22 05:47:54  DEBUG      Para 115: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857503084528>' object has no attribute 'ListId'
+2026-06-22 05:47:54  DEBUG      Para 116: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857499566528>' object has no attribute 'ListId'
+2026-06-22 05:47:54  DEBUG      Para 117: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857497767728>' object has no attribute 'ListId'
+2026-06-22 05:47:54  WARNING    Para 117: KeepTogether SET but read back False!
+2026-06-22 05:47:54  DEBUG      Para 118: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857467012320>' object has no attribute 'ListId'
+2026-06-22 05:47:54  DEBUG      Para 119: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857497767728>' object has no attribute 'ListId'
+2026-06-22 05:47:55  DEBUG      Para 120: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857503084528>' object has no attribute 'ListId'
+2026-06-22 05:47:55  DEBUG      Para 121: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857467012320>' object has no attribute 'ListId'
+2026-06-22 05:47:55  WARNING    Para 121: KeepTogether SET but read back False!
+2026-06-22 05:47:55  DEBUG      Para 122: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857497767728>' object has no attribute 'ListId'
+2026-06-22 05:47:55  DEBUG      Para 123: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857503084528>' object has no attribute 'ListId'
+2026-06-22 05:47:55  DEBUG      Para 124: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857467012320>' object has no attribute 'ListId'
+2026-06-22 05:47:55  DEBUG      Para 125: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857497767728>' object has no attribute 'ListId'
+2026-06-22 05:47:55  WARNING    Para 125: KeepTogether SET but read back False!
+2026-06-22 05:47:55  DEBUG      Para 126: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857503084528>' object has no attribute 'ListId'
+2026-06-22 05:47:55  DEBUG      Para 127: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857467012320>' object has no attribute 'ListId'
+2026-06-22 05:47:55  DEBUG      Para 128: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857497767728>' object has no attribute 'ListId'
+2026-06-22 05:47:55  DEBUG      Para 129: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857503084528>' object has no attribute 'ListId'
+2026-06-22 05:47:55  WARNING    Para 129: KeepTogether SET but read back False!
+2026-06-22 05:47:55  DEBUG      Para 130: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857467012320>' object has no attribute 'ListId'
+2026-06-22 05:47:55  DEBUG      Para 131: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857497767728>' object has no attribute 'ListId'
+2026-06-22 05:47:55  DEBUG      Para 132: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857503084528>' object has no attribute 'ListId'
+2026-06-22 05:47:55  DEBUG      Para 133: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857467012320>' object has no attribute 'ListId'
+2026-06-22 05:47:55  WARNING    Para 133: KeepTogether SET but read back False!
+2026-06-22 05:47:55  DEBUG      Para 134: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857497767728>' object has no attribute 'ListId'
+2026-06-22 05:47:55  DEBUG      Para 134 [Heading 3]: KeepWithNext -1 -> -1  '1.4.1 Mouse-Tracking Parallax (index.js)'
+2026-06-22 05:47:55  DEBUG      Para 135: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857503084528>' object has no attribute 'ListId'
+2026-06-22 05:47:55  DEBUG      Para 136: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857467012320>' object has no attribute 'ListId'
+2026-06-22 05:47:55  DEBUG      Para 136 [Heading 3]: KeepWithNext -1 -> -1  '1.4.2 Audio Player (index.js)'
+2026-06-22 05:47:55  DEBUG      Para 137: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857497767728>' object has no attribute 'ListId'
+2026-06-22 05:47:55  DEBUG      Para 138: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857503084528>' object has no attribute 'ListId'
+2026-06-22 05:47:55  DEBUG      Para 138 [Heading 2]: KeepWithNext -1 -> -1  '1.5 Side Quests: The Quest State Machine'
+2026-06-22 05:47:55  DEBUG      Para 139: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857467012320>' object has no attribute 'ListId'
+2026-06-22 05:47:55  DEBUG      Para 140: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857497767728>' object has no attribute 'ListId'
+2026-06-22 05:47:55  DEBUG      Para 141: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857503084528>' object has no attribute 'ListId'
+2026-06-22 05:47:55  DEBUG      Para 142: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857467012320>' object has no attribute 'ListId'
+2026-06-22 05:47:55  DEBUG      Para 142 [Heading 2]: KeepWithNext -1 -> -1  '1.6 Side Quests: The SVG Donut Chart'
+2026-06-22 05:47:55  DEBUG      Para 143: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857497767728>' object has no attribute 'ListId'
+2026-06-22 05:47:55  DEBUG      Para 144: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857503084528>' object has no attribute 'ListId'
+2026-06-22 05:47:55  DEBUG      Para 145: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857467012320>' object has no attribute 'ListId'
+2026-06-22 05:47:55  DEBUG      Para 146: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857497767728>' object has no attribute 'ListId'
+2026-06-22 05:47:55  DEBUG      Para 147: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857503084528>' object has no attribute 'ListId'
+2026-06-22 05:47:55  DEBUG      Para 147 [Heading 2]: KeepWithNext -1 -> -1  '1.7 Colour Semantics'
+2026-06-22 05:47:55  DEBUG      Para 148: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857467012320>' object has no attribute 'ListId'
+2026-06-22 05:47:55  DEBUG      Para 148 [Heading 1]: KeepWithNext -1 -> -1  'Table 4. Colour-Semantic Mapping'
+2026-06-22 05:47:56  DEBUG      Para 149: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857497767728>' object has no attribute 'ListId'
+2026-06-22 05:47:56  DEBUG      Para 150: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857503084528>' object has no attribute 'ListId'
+2026-06-22 05:47:56  DEBUG      Para 151: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857467012320>' object has no attribute 'ListId'
+2026-06-22 05:47:56  DEBUG      Para 152: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857497767728>' object has no attribute 'ListId'
+2026-06-22 05:47:56  WARNING    Para 152: KeepTogether SET but read back False!
+2026-06-22 05:47:56  DEBUG      Para 153: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857499566528>' object has no attribute 'ListId'
+2026-06-22 05:47:56  DEBUG      Para 154: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857497767728>' object has no attribute 'ListId'
+2026-06-22 05:47:56  DEBUG      Para 155: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857503084528>' object has no attribute 'ListId'
+2026-06-22 05:47:56  DEBUG      Para 156: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857499566528>' object has no attribute 'ListId'
+2026-06-22 05:47:56  WARNING    Para 156: KeepTogether SET but read back False!
+2026-06-22 05:47:56  DEBUG      Para 157: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857497767728>' object has no attribute 'ListId'
+2026-06-22 05:47:56  DEBUG      Para 158: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857503084528>' object has no attribute 'ListId'
+2026-06-22 05:47:56  DEBUG      Para 159: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857499566528>' object has no attribute 'ListId'
+2026-06-22 05:47:56  DEBUG      Para 160: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857467012320>' object has no attribute 'ListId'
+2026-06-22 05:47:56  WARNING    Para 160: KeepTogether SET but read back False!
+2026-06-22 05:47:56  DEBUG      Para 161: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857499566528>' object has no attribute 'ListId'
+2026-06-22 05:47:56  DEBUG      Para 162: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857497767728>' object has no attribute 'ListId'
+2026-06-22 05:47:56  DEBUG      Para 163: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857467012320>' object has no attribute 'ListId'
+2026-06-22 05:47:56  DEBUG      Para 164: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857503084528>' object has no attribute 'ListId'
+2026-06-22 05:47:56  WARNING    Para 164: KeepTogether SET but read back False!
+2026-06-22 05:47:56  DEBUG      Para 165: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857467012320>' object has no attribute 'ListId'
+2026-06-22 05:47:56  DEBUG      Para 166: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857499566528>' object has no attribute 'ListId'
+2026-06-22 05:47:56  DEBUG      Para 167: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857503084528>' object has no attribute 'ListId'
+2026-06-22 05:47:56  DEBUG      Para 167 [Heading 1]: KeepWithNext -1 -> -1  'Section 2: Development Process'
+2026-06-22 05:47:56  DEBUG      Para 168: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857467012320>' object has no attribute 'ListId'
+2026-06-22 05:47:56  DEBUG      Para 168 [Heading 2]: KeepWithNext -1 -> -1  '2.1 Version Control'
+2026-06-22 05:47:56  DEBUG      Para 169: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857499566528>' object has no attribute 'ListId'
+2026-06-22 05:47:56  DEBUG      Para 170: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857503084528>' object has no attribute 'ListId'
+2026-06-22 05:47:56  DEBUG      Para 170 [Heading 2]: KeepWithNext -1 -> -1  '2.2 Development Timeline'
+2026-06-22 05:47:56  DEBUG      Para 171: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857467012320>' object has no attribute 'ListId'
+2026-06-22 05:47:56  DEBUG      Para 171 [Heading 1]: KeepWithNext -1 -> -1  'Table 5. Development Sessions'
+2026-06-22 05:47:56  DEBUG      Para 172: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857499566528>' object has no attribute 'ListId'
+2026-06-22 05:47:56  DEBUG      Para 173: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857503084528>' object has no attribute 'ListId'
+2026-06-22 05:47:56  DEBUG      Para 174: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857467012320>' object has no attribute 'ListId'
+2026-06-22 05:47:56  WARNING    Para 174: KeepTogether SET but read back False!
+2026-06-22 05:47:56  DEBUG      Para 175: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857499566528>' object has no attribute 'ListId'
+2026-06-22 05:47:56  DEBUG      Para 176: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857503084528>' object has no attribute 'ListId'
+2026-06-22 05:47:57  DEBUG      Para 177: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857497767728>' object has no attribute 'ListId'
+2026-06-22 05:47:57  WARNING    Para 177: KeepTogether SET but read back False!
+2026-06-22 05:47:57  DEBUG      Para 178: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857503084528>' object has no attribute 'ListId'
+2026-06-22 05:47:57  DEBUG      Para 179: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857467012320>' object has no attribute 'ListId'
+2026-06-22 05:47:57  DEBUG      Para 180: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857499566528>' object has no attribute 'ListId'
+2026-06-22 05:47:57  WARNING    Para 180: KeepTogether SET but read back False!
+2026-06-22 05:47:57  DEBUG      Para 181: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857467012320>' object has no attribute 'ListId'
+2026-06-22 05:47:57  DEBUG      Para 182: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857497767728>' object has no attribute 'ListId'
+2026-06-22 05:47:57  DEBUG      Para 183: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857499566528>' object has no attribute 'ListId'
+2026-06-22 05:47:57  WARNING    Para 183: KeepTogether SET but read back False!
+2026-06-22 05:47:57  DEBUG      Para 184: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857467012320>' object has no attribute 'ListId'
+2026-06-22 05:47:57  DEBUG      Para 184 [Heading 2]: KeepWithNext -1 -> -1  '2.3 Significant Technical Challenges'
+2026-06-22 05:47:57  DEBUG      Para 185: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857497767728>' object has no attribute 'ListId'
+2026-06-22 05:47:57  DEBUG      Para 185 [Heading 3]: KeepWithNext -1 -> -1  'Dark and Light Theme (12 Bugs)'
+2026-06-22 05:47:57  DEBUG      Para 186: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857499566528>' object has no attribute 'ListId'
+2026-06-22 05:47:57  DEBUG      Para 187: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857467012320>' object has no attribute 'ListId'
+2026-06-22 05:47:57  DEBUG      Para 187 [Heading 3]: KeepWithNext -1 -> -1  'ARIA Focus Ring (3 Attempts)'
+2026-06-22 05:47:57  DEBUG      Para 188: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857497767728>' object has no attribute 'ListId'
+2026-06-22 05:47:57  DEBUG      Para 189: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857499566528>' object has no attribute 'ListId'
+2026-06-22 05:47:57  DEBUG      Para 189 [Heading 3]: KeepWithNext -1 -> -1  'Chrome Autofill Preview (3 Attempts)'
+2026-06-22 05:47:57  DEBUG      Para 190: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857467012320>' object has no attribute 'ListId'
+2026-06-22 05:47:57  DEBUG      Para 191: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857497767728>' object has no attribute 'ListId'
+2026-06-22 05:47:57  DEBUG      Para 191 [Heading 2]: KeepWithNext -1 -> -1  '2.4 Final Validation'
+2026-06-22 05:47:57  DEBUG      Para 192: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857499566528>' object has no attribute 'ListId'
+2026-06-22 05:47:57  DEBUG      Para 193: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857467012320>' object has no attribute 'ListId'
+2026-06-22 05:47:57  DEBUG      Para 194: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857497767728>' object has no attribute 'ListId'
+2026-06-22 05:47:57  DEBUG      Para 195: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857499566528>' object has no attribute 'ListId'
+2026-06-22 05:47:57  DEBUG      Para 196: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857467012320>' object has no attribute 'ListId'
+2026-06-22 05:47:57  DEBUG      Para 196 [Heading 1]: KeepWithNext -1 -> -1  '1. Section Heading'
+2026-06-22 05:47:57  DEBUG      Para 197: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857497767728>' object has no attribute 'ListId'
+2026-06-22 05:47:57  DEBUG      Para 198: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857499566528>' object has no attribute 'ListId'
+2026-06-22 05:47:57  DEBUG      Para 198 [Heading 2]: KeepWithNext -1 -> -1  '1.1 Subsection Heading'
+2026-06-22 05:47:57  DEBUG      Para 199: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857467012320>' object has no attribute 'ListId'
+2026-06-22 05:47:57  DEBUG      Para 200: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857497767728>' object has no attribute 'ListId'
+2026-06-22 05:47:57  DEBUG      Para 200 [Heading 1]: KeepWithNext -1 -> -1  '2. Tables'
+2026-06-22 05:47:57  DEBUG      Para 201: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857499566528>' object has no attribute 'ListId'
+2026-06-22 05:47:57  DEBUG      Para 202: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857467012320>' object has no attribute 'ListId'
+2026-06-22 05:47:57  DEBUG      Para 203: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857497767728>' object has no attribute 'ListId'
+2026-06-22 05:47:57  DEBUG      Para 204: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857499566528>' object has no attribute 'ListId'
+2026-06-22 05:47:57  DEBUG      Para 205: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857467012320>' object has no attribute 'ListId'
+2026-06-22 05:47:57  WARNING    Para 205: KeepTogether SET but read back False!
+2026-06-22 05:47:57  DEBUG      Para 206: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857497767728>' object has no attribute 'ListId'
+2026-06-22 05:47:58  DEBUG      Para 207: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857499566528>' object has no attribute 'ListId'
+2026-06-22 05:47:58  DEBUG      Para 208: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857467012320>' object has no attribute 'ListId'
+2026-06-22 05:47:58  DEBUG      Para 209: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857497767728>' object has no attribute 'ListId'
+2026-06-22 05:47:58  WARNING    Para 209: KeepTogether SET but read back False!
+2026-06-22 05:47:58  DEBUG      Para 210: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857499566528>' object has no attribute 'ListId'
+2026-06-22 05:47:58  DEBUG      Para 211: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857467012320>' object has no attribute 'ListId'
+2026-06-22 05:47:58  DEBUG      Para 212: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857497767728>' object has no attribute 'ListId'
+2026-06-22 05:47:58  DEBUG      Para 213: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857499566528>' object has no attribute 'ListId'
+2026-06-22 05:47:58  WARNING    Para 213: KeepTogether SET but read back False!
+2026-06-22 05:47:58  DEBUG      Para 214: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857467012320>' object has no attribute 'ListId'
+2026-06-22 05:47:58  DEBUG      Para 215: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857497767728>' object has no attribute 'ListId'
+2026-06-22 05:47:58  DEBUG      Para 216: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857499566528>' object has no attribute 'ListId'
+2026-06-22 05:47:58  DEBUG      Para 217: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857467012320>' object has no attribute 'ListId'
+2026-06-22 05:47:58  WARNING    Para 217: KeepTogether SET but read back False!
+2026-06-22 05:47:58  DEBUG      Para 218: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857497767728>' object has no attribute 'ListId'
+2026-06-22 05:47:58  DEBUG      Para 219: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857499566528>' object has no attribute 'ListId'
+2026-06-22 05:47:58  DEBUG      Para 219 [Heading 1]: KeepWithNext -1 -> -1  '3. Lists'
+2026-06-22 05:47:58  DEBUG      Para 220: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857467012320>' object has no attribute 'ListId'
+2026-06-22 05:47:58  DEBUG      Para 220 [Heading 2]: KeepWithNext -1 -> -1  '3.1 Bullet List'
+2026-06-22 05:47:58  DEBUG      Para 221: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857497767728>' object has no attribute 'ListId'
+2026-06-22 05:47:58  DEBUG      Para 222: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857499566528>' object has no attribute 'ListId'
+2026-06-22 05:47:58  DEBUG      Para 223: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857467012320>' object has no attribute 'ListId'
+2026-06-22 05:47:58  DEBUG      Para 224: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857497767728>' object has no attribute 'ListId'
+2026-06-22 05:47:58  DEBUG      Para 224 [Heading 2]: KeepWithNext -1 -> -1  '3.2 Numbered List'
+2026-06-22 05:47:58  DEBUG      Para 225: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857499566528>' object has no attribute 'ListId'
+2026-06-22 05:47:58  DEBUG      Para 226: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857467012320>' object has no attribute 'ListId'
+2026-06-22 05:47:58  DEBUG      Para 227: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857497767728>' object has no attribute 'ListId'
+2026-06-22 05:47:58  DEBUG      Para 228: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857499566528>' object has no attribute 'ListId'
+2026-06-22 05:47:58  DEBUG      Para 229: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857467012320>' object has no attribute 'ListId'
+2026-06-22 05:47:58  DEBUG      Para 230: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857497767728>' object has no attribute 'ListId'
+2026-06-22 05:47:58  DEBUG      Para 231: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857499566528>' object has no attribute 'ListId'
+2026-06-22 05:47:58  DEBUG      Para 232: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857467012320>' object has no attribute 'ListId'
+2026-06-22 05:47:58  DEBUG      Para 233: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857497767728>' object has no attribute 'ListId'
+2026-06-22 05:47:58  DEBUG      Para 234: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857499566528>' object has no attribute 'ListId'
+2026-06-22 05:47:58  DEBUG      Para 235: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857467012320>' object has no attribute 'ListId'
+2026-06-22 05:47:58  DEBUG      Para 236: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857497767728>' object has no attribute 'ListId'
+2026-06-22 05:47:59  DEBUG      Para 237: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857499566528>' object has no attribute 'ListId'
+2026-06-22 05:47:59  DEBUG      Para 238: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857467012320>' object has no attribute 'ListId'
+2026-06-22 05:47:59  DEBUG      Para 239: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857497767728>' object has no attribute 'ListId'
+2026-06-22 05:47:59  DEBUG      Para 240: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857499566528>' object has no attribute 'ListId'
+2026-06-22 05:47:59  DEBUG      Para 241: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857467012320>' object has no attribute 'ListId'
+2026-06-22 05:47:59  DEBUG      Para 242: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857497767728>' object has no attribute 'ListId'
+2026-06-22 05:47:59  DEBUG      Para 243: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857499566528>' object has no attribute 'ListId'
+2026-06-22 05:47:59  DEBUG      Para 244: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857467012320>' object has no attribute 'ListId'
+2026-06-22 05:47:59  DEBUG      Para 245: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857497767728>' object has no attribute 'ListId'
+2026-06-22 05:47:59  DEBUG      Para 246: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857499566528>' object has no attribute 'ListId'
+2026-06-22 05:47:59  DEBUG      Para 247: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857467012320>' object has no attribute 'ListId'
+2026-06-22 05:47:59  DEBUG      Para 248: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857497767728>' object has no attribute 'ListId'
+2026-06-22 05:47:59  DEBUG      Para 249: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857499566528>' object has no attribute 'ListId'
+2026-06-22 05:47:59  DEBUG      Para 250: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2857467012320>' object has no attribute 'ListId'
+2026-06-22 05:47:59  DEBUG      Pass complete -- KeepWithNext OK:29 FAIL:0 | KeepTogether OK:133 FAIL:29 | ListGroups:0
+2026-06-22 05:47:59  DEBUG      Table 2: 8 rows (char 1923)
+2026-06-22 05:47:59  DEBUG      Table 3: 4 rows (char 3176)
+2026-06-22 05:47:59  DEBUG      Table 4: 5 rows (char 5471)
+2026-06-22 05:47:59  DEBUG      Table 5: 4 rows (char 13744)
+2026-06-22 05:47:59  DEBUG      Table 6: 4 rows (char 14675)
+2026-06-22 05:47:59  DEBUG      Table 7: 4 rows (char 18782)
+2026-06-22 05:48:00  DEBUG      Tables done -- rows OK:29 FAIL:0
+2026-06-22 05:48:00  INFO       Formatting rules applied
+2026-06-22 05:48:00  DEBUG      TOC tables found: 0
+2026-06-22 05:48:00  DEBUG      Fields.Update() called
+2026-06-22 05:48:00  DEBUG      doc.Save() OK
+2026-06-22 05:48:00  INFO       COM session COMPLETE -- toc_updated=True
+2026-06-22 05:48:00  DEBUG      doc.Close() OK
+2026-06-22 05:48:00  DEBUG      word.Quit() OK
+2026-06-22 05:48:00  DEBUG      CoUninitialize OK
+2026-06-22 05:58:11  INFO     ============================================================
+2026-06-22 05:58:11  INFO     COM session START: Itc4214 Iasonpapadopoulos Midtermprojectreport_1.docx
+2026-06-22 05:58:11  DEBUG      Platform: Windows
+2026-06-22 05:58:11  DEBUG      pywin32 imported OK
+2026-06-22 05:58:11  DEBUG      CoInitialize OK
+2026-06-22 05:58:13  DEBUG      Word.Application dispatched OK
+2026-06-22 05:58:13  DEBUG      word.Options.UpdateLinksAtOpen = False OK
+2026-06-22 05:58:13  DEBUG      word.Options.ConfirmConversions = False OK
+2026-06-22 05:58:13  DEBUG      word.DisplayAlerts = 0 OK
+2026-06-22 05:58:14  DEBUG      Document opened OK: D:\.IT_Projects\_GIT_hub\CLI - Rhema\output\Itc4214 Iasonpapadopoulos Midtermprojectreport_1.docx
+2026-06-22 05:58:14  INFO       Applying professional formatting rules ...
+2026-06-22 05:58:14  DEBUG      Total paragraphs in document: 250
+2026-06-22 05:58:14  DEBUG      Body start: para 1 (Heading 1: 'COVER PAGE')
+2026-06-22 05:58:15  DEBUG      Body start: para 56 (Heading 1: 'Section 1: Technical Code Analysis')
+2026-06-22 05:58:19  DEBUG      Body section: paras 56 to 250
+2026-06-22 05:58:20  DEBUG      Para 56: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052999760>' object has no attribute 'ListId'
+2026-06-22 05:58:20  DEBUG      Para 56 [Heading 1]: KeepWithNext -1 -> -1  'Section 1: Technical Code Analysis'
+2026-06-22 05:58:20  DEBUG      Para 57: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953024489616>' object has no attribute 'ListId'
+2026-06-22 05:58:20  DEBUG      Para 57 [Heading 2]: KeepWithNext -1 -> -1  '1.1 Project Architecture'
+2026-06-22 05:58:20  DEBUG      Para 58: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953024489616>' object has no attribute 'ListId'
+2026-06-22 05:58:20  DEBUG      Para 59: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056998064>' object has no attribute 'ListId'
+2026-06-22 05:58:20  DEBUG      Para 60: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056998064>' object has no attribute 'ListId'
+2026-06-22 05:58:20  DEBUG      Para 60 [Heading 1]: KeepWithNext -1 -> -1  'Table 1. File Organisation and Governing'
+2026-06-22 05:58:20  DEBUG      Para 61: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953057018736>' object has no attribute 'ListId'
+2026-06-22 05:58:20  DEBUG      Para 62: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953025047232>' object has no attribute 'ListId'
+2026-06-22 05:58:20  DEBUG      Para 63: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953025047232>' object has no attribute 'ListId'
+2026-06-22 05:58:20  DEBUG      Para 64: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953025079888>' object has no attribute 'ListId'
+2026-06-22 05:58:20  WARNING    Para 64: KeepTogether SET but read back False!
+2026-06-22 05:58:20  DEBUG      Para 65: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953025080144>' object has no attribute 'ListId'
+2026-06-22 05:58:20  DEBUG      Para 66: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953024144352>' object has no attribute 'ListId'
+2026-06-22 05:58:20  DEBUG      Para 67: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953024144352>' object has no attribute 'ListId'
+2026-06-22 05:58:20  DEBUG      Para 68: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953024837904>' object has no attribute 'ListId'
+2026-06-22 05:58:20  WARNING    Para 68: KeepTogether SET but read back False!
+2026-06-22 05:58:20  DEBUG      Para 69: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953024837904>' object has no attribute 'ListId'
+2026-06-22 05:58:20  DEBUG      Para 70: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953024081008>' object has no attribute 'ListId'
+2026-06-22 05:58:20  DEBUG      Para 71: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953024584848>' object has no attribute 'ListId'
+2026-06-22 05:58:20  DEBUG      Para 72: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953024584848>' object has no attribute 'ListId'
+2026-06-22 05:58:20  WARNING    Para 72: KeepTogether SET but read back False!
+2026-06-22 05:58:20  DEBUG      Para 73: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053245152>' object has no attribute 'ListId'
+2026-06-22 05:58:20  DEBUG      Para 74: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053245152>' object has no attribute 'ListId'
+2026-06-22 05:58:20  DEBUG      Para 75: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052469328>' object has no attribute 'ListId'
+2026-06-22 05:58:20  DEBUG      Para 76: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052469328>' object has no attribute 'ListId'
+2026-06-22 05:58:20  WARNING    Para 76: KeepTogether SET but read back False!
+2026-06-22 05:58:20  DEBUG      Para 77: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953051831200>' object has no attribute 'ListId'
+2026-06-22 05:58:20  DEBUG      Para 78: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953057178320>' object has no attribute 'ListId'
+2026-06-22 05:58:20  DEBUG      Para 79: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953057178320>' object has no attribute 'ListId'
+2026-06-22 05:58:20  DEBUG      Para 80: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953024731504>' object has no attribute 'ListId'
+2026-06-22 05:58:20  WARNING    Para 80: KeepTogether SET but read back False!
+2026-06-22 05:58:20  DEBUG      Para 81: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953024731504>' object has no attribute 'ListId'
+2026-06-22 05:58:20  DEBUG      Para 82: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953057055824>' object has no attribute 'ListId'
+2026-06-22 05:58:20  DEBUG      Para 83: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953057058128>' object has no attribute 'ListId'
+2026-06-22 05:58:20  DEBUG      Para 84: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052917696>' object has no attribute 'ListId'
+2026-06-22 05:58:20  WARNING    Para 84: KeepTogether SET but read back False!
+2026-06-22 05:58:20  DEBUG      Para 85: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:20  DEBUG      Para 86: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056935760>' object has no attribute 'ListId'
+2026-06-22 05:58:21  DEBUG      Para 87: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052917696>' object has no attribute 'ListId'
+2026-06-22 05:58:21  DEBUG      Para 88: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:21  WARNING    Para 88: KeepTogether SET but read back False!
+2026-06-22 05:58:21  DEBUG      Para 89: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056935760>' object has no attribute 'ListId'
+2026-06-22 05:58:21  DEBUG      Para 90: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052917696>' object has no attribute 'ListId'
+2026-06-22 05:58:21  DEBUG      Para 91: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:21  DEBUG      Para 92: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056935760>' object has no attribute 'ListId'
+2026-06-22 05:58:21  WARNING    Para 92: KeepTogether SET but read back False!
+2026-06-22 05:58:21  DEBUG      Para 93: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:21  DEBUG      Para 93 [Heading 2]: KeepWithNext -1 -> -1  '1.2 Inline CSS Justification'
+2026-06-22 05:58:21  DEBUG      Para 94: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052917696>' object has no attribute 'ListId'
+2026-06-22 05:58:21  DEBUG      Para 95: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056935760>' object has no attribute 'ListId'
+2026-06-22 05:58:21  DEBUG      Para 95 [Heading 1]: KeepWithNext -1 -> -1  'Table 2. Inline CSS Categories and Justi'
+2026-06-22 05:58:21  DEBUG      Para 96: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:21  DEBUG      Para 97: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052917696>' object has no attribute 'ListId'
+2026-06-22 05:58:21  DEBUG      Para 98: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056935760>' object has no attribute 'ListId'
+2026-06-22 05:58:21  WARNING    Para 98: KeepTogether SET but read back False!
+2026-06-22 05:58:21  DEBUG      Para 99: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:21  DEBUG      Para 100: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052917696>' object has no attribute 'ListId'
+2026-06-22 05:58:21  DEBUG      Para 101: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056935760>' object has no attribute 'ListId'
+2026-06-22 05:58:21  WARNING    Para 101: KeepTogether SET but read back False!
+2026-06-22 05:58:21  DEBUG      Para 102: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052917696>' object has no attribute 'ListId'
+2026-06-22 05:58:21  DEBUG      Para 103: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:21  DEBUG      Para 104: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056935760>' object has no attribute 'ListId'
+2026-06-22 05:58:21  WARNING    Para 104: KeepTogether SET but read back False!
+2026-06-22 05:58:21  DEBUG      Para 105: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:21  DEBUG      Para 106: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052917696>' object has no attribute 'ListId'
+2026-06-22 05:58:21  DEBUG      Para 107: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056935760>' object has no attribute 'ListId'
+2026-06-22 05:58:21  WARNING    Para 107: KeepTogether SET but read back False!
+2026-06-22 05:58:21  DEBUG      Para 108: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:21  DEBUG      Para 108 [Heading 2]: KeepWithNext -1 -> -1  '1.3 Shared Layer: common.js'
+2026-06-22 05:58:21  DEBUG      Para 109: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052917696>' object has no attribute 'ListId'
+2026-06-22 05:58:21  DEBUG      Para 110: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056935760>' object has no attribute 'ListId'
+2026-06-22 05:58:21  DEBUG      Para 111: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:21  DEBUG      Para 112: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052917696>' object has no attribute 'ListId'
+2026-06-22 05:58:21  DEBUG      Para 112 [Heading 2]: KeepWithNext -1 -> -1  '1.4 Page-Specific Behaviour'
+2026-06-22 05:58:21  DEBUG      Para 113: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056935760>' object has no attribute 'ListId'
+2026-06-22 05:58:21  DEBUG      Para 113 [Heading 1]: KeepWithNext -1 -> -1  'Table 3. Page Features and Implementatio'
+2026-06-22 05:58:21  DEBUG      Para 114: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:21  DEBUG      Para 115: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052917696>' object has no attribute 'ListId'
+2026-06-22 05:58:21  DEBUG      Para 116: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056935760>' object has no attribute 'ListId'
+2026-06-22 05:58:22  DEBUG      Para 117: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:22  WARNING    Para 117: KeepTogether SET but read back False!
+2026-06-22 05:58:22  DEBUG      Para 118: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052917696>' object has no attribute 'ListId'
+2026-06-22 05:58:22  DEBUG      Para 119: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:22  DEBUG      Para 120: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056935760>' object has no attribute 'ListId'
+2026-06-22 05:58:22  DEBUG      Para 121: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052917696>' object has no attribute 'ListId'
+2026-06-22 05:58:22  WARNING    Para 121: KeepTogether SET but read back False!
+2026-06-22 05:58:22  DEBUG      Para 122: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:22  DEBUG      Para 123: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056935760>' object has no attribute 'ListId'
+2026-06-22 05:58:22  DEBUG      Para 124: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052917696>' object has no attribute 'ListId'
+2026-06-22 05:58:22  DEBUG      Para 125: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:22  WARNING    Para 125: KeepTogether SET but read back False!
+2026-06-22 05:58:22  DEBUG      Para 126: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056935760>' object has no attribute 'ListId'
+2026-06-22 05:58:22  DEBUG      Para 127: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052917696>' object has no attribute 'ListId'
+2026-06-22 05:58:22  DEBUG      Para 128: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:22  DEBUG      Para 129: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056935760>' object has no attribute 'ListId'
+2026-06-22 05:58:22  WARNING    Para 129: KeepTogether SET but read back False!
+2026-06-22 05:58:22  DEBUG      Para 130: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052917696>' object has no attribute 'ListId'
+2026-06-22 05:58:22  DEBUG      Para 131: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:22  DEBUG      Para 132: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056935760>' object has no attribute 'ListId'
+2026-06-22 05:58:22  DEBUG      Para 133: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052917696>' object has no attribute 'ListId'
+2026-06-22 05:58:22  WARNING    Para 133: KeepTogether SET but read back False!
+2026-06-22 05:58:22  DEBUG      Para 134: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:22  DEBUG      Para 134 [Heading 3]: KeepWithNext -1 -> -1  '1.4.1 Mouse-Tracking Parallax (index.js)'
+2026-06-22 05:58:22  DEBUG      Para 135: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056935760>' object has no attribute 'ListId'
+2026-06-22 05:58:22  DEBUG      Para 136: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052917696>' object has no attribute 'ListId'
+2026-06-22 05:58:22  DEBUG      Para 136 [Heading 3]: KeepWithNext -1 -> -1  '1.4.2 Audio Player (index.js)'
+2026-06-22 05:58:22  DEBUG      Para 137: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:22  DEBUG      Para 138: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056935760>' object has no attribute 'ListId'
+2026-06-22 05:58:22  DEBUG      Para 138 [Heading 2]: KeepWithNext -1 -> -1  '1.5 Side Quests: The Quest State Machine'
+2026-06-22 05:58:22  DEBUG      Para 139: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052917696>' object has no attribute 'ListId'
+2026-06-22 05:58:22  DEBUG      Para 140: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:22  DEBUG      Para 141: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056935760>' object has no attribute 'ListId'
+2026-06-22 05:58:23  DEBUG      Para 142: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052917696>' object has no attribute 'ListId'
+2026-06-22 05:58:23  DEBUG      Para 142 [Heading 2]: KeepWithNext -1 -> -1  '1.6 Side Quests: The SVG Donut Chart'
+2026-06-22 05:58:23  DEBUG      Para 143: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:23  DEBUG      Para 144: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056935760>' object has no attribute 'ListId'
+2026-06-22 05:58:23  DEBUG      Para 145: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052917696>' object has no attribute 'ListId'
+2026-06-22 05:58:23  DEBUG      Para 146: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:23  DEBUG      Para 147: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056935760>' object has no attribute 'ListId'
+2026-06-22 05:58:23  DEBUG      Para 147 [Heading 2]: KeepWithNext -1 -> -1  '1.7 Colour Semantics'
+2026-06-22 05:58:23  DEBUG      Para 148: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052917696>' object has no attribute 'ListId'
+2026-06-22 05:58:23  DEBUG      Para 148 [Heading 1]: KeepWithNext -1 -> -1  'Table 4. Colour-Semantic Mapping'
+2026-06-22 05:58:23  DEBUG      Para 149: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:23  DEBUG      Para 150: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056935760>' object has no attribute 'ListId'
+2026-06-22 05:58:23  DEBUG      Para 151: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052917696>' object has no attribute 'ListId'
+2026-06-22 05:58:23  DEBUG      Para 152: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:23  WARNING    Para 152: KeepTogether SET but read back False!
+2026-06-22 05:58:23  DEBUG      Para 153: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056935760>' object has no attribute 'ListId'
+2026-06-22 05:58:23  DEBUG      Para 154: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:23  DEBUG      Para 155: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052917696>' object has no attribute 'ListId'
+2026-06-22 05:58:23  DEBUG      Para 156: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056935760>' object has no attribute 'ListId'
+2026-06-22 05:58:23  WARNING    Para 156: KeepTogether SET but read back False!
+2026-06-22 05:58:23  DEBUG      Para 157: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:23  DEBUG      Para 158: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052917696>' object has no attribute 'ListId'
+2026-06-22 05:58:23  DEBUG      Para 159: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056935760>' object has no attribute 'ListId'
+2026-06-22 05:58:23  DEBUG      Para 160: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:23  WARNING    Para 160: KeepTogether SET but read back False!
+2026-06-22 05:58:23  DEBUG      Para 161: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056935760>' object has no attribute 'ListId'
+2026-06-22 05:58:23  DEBUG      Para 162: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052917696>' object has no attribute 'ListId'
+2026-06-22 05:58:23  DEBUG      Para 163: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:23  DEBUG      Para 164: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056935760>' object has no attribute 'ListId'
+2026-06-22 05:58:23  WARNING    Para 164: KeepTogether SET but read back False!
+2026-06-22 05:58:23  DEBUG      Para 165: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:23  DEBUG      Para 166: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052917696>' object has no attribute 'ListId'
+2026-06-22 05:58:23  DEBUG      Para 167: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056935760>' object has no attribute 'ListId'
+2026-06-22 05:58:23  DEBUG      Para 167 [Heading 1]: KeepWithNext -1 -> -1  'Section 2: Development Process'
+2026-06-22 05:58:23  DEBUG      Para 168: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:23  DEBUG      Para 168 [Heading 2]: KeepWithNext -1 -> -1  '2.1 Version Control'
+2026-06-22 05:58:23  DEBUG      Para 169: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052917696>' object has no attribute 'ListId'
+2026-06-22 05:58:24  DEBUG      Para 170: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056935760>' object has no attribute 'ListId'
+2026-06-22 05:58:24  DEBUG      Para 170 [Heading 2]: KeepWithNext -1 -> -1  '2.2 Development Timeline'
+2026-06-22 05:58:24  DEBUG      Para 171: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:24  DEBUG      Para 171 [Heading 1]: KeepWithNext -1 -> -1  'Table 5. Development Sessions'
+2026-06-22 05:58:24  DEBUG      Para 172: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052917696>' object has no attribute 'ListId'
+2026-06-22 05:58:24  DEBUG      Para 173: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056935760>' object has no attribute 'ListId'
+2026-06-22 05:58:24  DEBUG      Para 174: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:24  WARNING    Para 174: KeepTogether SET but read back False!
+2026-06-22 05:58:24  DEBUG      Para 175: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052917696>' object has no attribute 'ListId'
+2026-06-22 05:58:24  DEBUG      Para 176: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056935760>' object has no attribute 'ListId'
+2026-06-22 05:58:24  DEBUG      Para 177: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:24  WARNING    Para 177: KeepTogether SET but read back False!
+2026-06-22 05:58:24  DEBUG      Para 178: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056935760>' object has no attribute 'ListId'
+2026-06-22 05:58:24  DEBUG      Para 179: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052917696>' object has no attribute 'ListId'
+2026-06-22 05:58:24  DEBUG      Para 180: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:24  WARNING    Para 180: KeepTogether SET but read back False!
+2026-06-22 05:58:24  DEBUG      Para 181: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052917696>' object has no attribute 'ListId'
+2026-06-22 05:58:24  DEBUG      Para 182: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056935760>' object has no attribute 'ListId'
+2026-06-22 05:58:24  DEBUG      Para 183: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:24  WARNING    Para 183: KeepTogether SET but read back False!
+2026-06-22 05:58:24  DEBUG      Para 184: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052917696>' object has no attribute 'ListId'
+2026-06-22 05:58:24  DEBUG      Para 184 [Heading 2]: KeepWithNext -1 -> -1  '2.3 Significant Technical Challenges'
+2026-06-22 05:58:24  DEBUG      Para 185: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056935760>' object has no attribute 'ListId'
+2026-06-22 05:58:24  DEBUG      Para 185 [Heading 3]: KeepWithNext -1 -> -1  'Dark and Light Theme (12 Bugs)'
+2026-06-22 05:58:24  DEBUG      Para 186: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:24  DEBUG      Para 187: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052917696>' object has no attribute 'ListId'
+2026-06-22 05:58:24  DEBUG      Para 187 [Heading 3]: KeepWithNext -1 -> -1  'ARIA Focus Ring (3 Attempts)'
+2026-06-22 05:58:24  DEBUG      Para 188: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056935760>' object has no attribute 'ListId'
+2026-06-22 05:58:24  DEBUG      Para 189: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:24  DEBUG      Para 189 [Heading 3]: KeepWithNext -1 -> -1  'Chrome Autofill Preview (3 Attempts)'
+2026-06-22 05:58:24  DEBUG      Para 190: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052917696>' object has no attribute 'ListId'
+2026-06-22 05:58:24  DEBUG      Para 191: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056935760>' object has no attribute 'ListId'
+2026-06-22 05:58:24  DEBUG      Para 191 [Heading 2]: KeepWithNext -1 -> -1  '2.4 Final Validation'
+2026-06-22 05:58:24  DEBUG      Para 192: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:24  DEBUG      Para 193: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052917696>' object has no attribute 'ListId'
+2026-06-22 05:58:24  DEBUG      Para 194: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056935760>' object has no attribute 'ListId'
+2026-06-22 05:58:24  DEBUG      Para 195: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:24  DEBUG      Para 196: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052917696>' object has no attribute 'ListId'
+2026-06-22 05:58:25  DEBUG      Para 196 [Heading 1]: KeepWithNext -1 -> -1  '1. Section Heading'
+2026-06-22 05:58:25  DEBUG      Para 197: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056935760>' object has no attribute 'ListId'
+2026-06-22 05:58:25  DEBUG      Para 198: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:25  DEBUG      Para 198 [Heading 2]: KeepWithNext -1 -> -1  '1.1 Subsection Heading'
+2026-06-22 05:58:25  DEBUG      Para 199: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052917696>' object has no attribute 'ListId'
+2026-06-22 05:58:25  DEBUG      Para 200: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056935760>' object has no attribute 'ListId'
+2026-06-22 05:58:25  DEBUG      Para 200 [Heading 1]: KeepWithNext -1 -> -1  '2. Tables'
+2026-06-22 05:58:25  DEBUG      Para 201: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:25  DEBUG      Para 202: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052917696>' object has no attribute 'ListId'
+2026-06-22 05:58:25  DEBUG      Para 203: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056935760>' object has no attribute 'ListId'
+2026-06-22 05:58:25  DEBUG      Para 204: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:25  DEBUG      Para 205: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052917696>' object has no attribute 'ListId'
+2026-06-22 05:58:25  WARNING    Para 205: KeepTogether SET but read back False!
+2026-06-22 05:58:25  DEBUG      Para 206: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056935760>' object has no attribute 'ListId'
+2026-06-22 05:58:25  DEBUG      Para 207: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:25  DEBUG      Para 208: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052917696>' object has no attribute 'ListId'
+2026-06-22 05:58:25  DEBUG      Para 209: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056935760>' object has no attribute 'ListId'
+2026-06-22 05:58:25  WARNING    Para 209: KeepTogether SET but read back False!
+2026-06-22 05:58:25  DEBUG      Para 210: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:25  DEBUG      Para 211: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052917696>' object has no attribute 'ListId'
+2026-06-22 05:58:25  DEBUG      Para 212: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056935760>' object has no attribute 'ListId'
+2026-06-22 05:58:25  DEBUG      Para 213: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:25  WARNING    Para 213: KeepTogether SET but read back False!
+2026-06-22 05:58:25  DEBUG      Para 214: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052917696>' object has no attribute 'ListId'
+2026-06-22 05:58:25  DEBUG      Para 215: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056935760>' object has no attribute 'ListId'
+2026-06-22 05:58:25  DEBUG      Para 216: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:25  DEBUG      Para 217: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052917696>' object has no attribute 'ListId'
+2026-06-22 05:58:25  WARNING    Para 217: KeepTogether SET but read back False!
+2026-06-22 05:58:25  DEBUG      Para 218: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056935760>' object has no attribute 'ListId'
+2026-06-22 05:58:25  DEBUG      Para 219: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:25  DEBUG      Para 219 [Heading 1]: KeepWithNext -1 -> -1  '3. Lists'
+2026-06-22 05:58:25  DEBUG      Para 220: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052917696>' object has no attribute 'ListId'
+2026-06-22 05:58:25  DEBUG      Para 220 [Heading 2]: KeepWithNext -1 -> -1  '3.1 Bullet List'
+2026-06-22 05:58:25  DEBUG      Para 221: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056935760>' object has no attribute 'ListId'
+2026-06-22 05:58:25  DEBUG      Para 222: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:25  DEBUG      Para 223: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052917696>' object has no attribute 'ListId'
+2026-06-22 05:58:26  DEBUG      Para 224: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056935760>' object has no attribute 'ListId'
+2026-06-22 05:58:26  DEBUG      Para 224 [Heading 2]: KeepWithNext -1 -> -1  '3.2 Numbered List'
+2026-06-22 05:58:26  DEBUG      Para 225: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:26  DEBUG      Para 226: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052917696>' object has no attribute 'ListId'
+2026-06-22 05:58:26  DEBUG      Para 227: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056935760>' object has no attribute 'ListId'
+2026-06-22 05:58:26  DEBUG      Para 228: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:26  DEBUG      Para 229: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052917696>' object has no attribute 'ListId'
+2026-06-22 05:58:26  DEBUG      Para 230: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056935760>' object has no attribute 'ListId'
+2026-06-22 05:58:26  DEBUG      Para 231: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:26  DEBUG      Para 232: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052917696>' object has no attribute 'ListId'
+2026-06-22 05:58:26  DEBUG      Para 233: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056935760>' object has no attribute 'ListId'
+2026-06-22 05:58:26  DEBUG      Para 234: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:26  DEBUG      Para 235: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052917696>' object has no attribute 'ListId'
+2026-06-22 05:58:26  DEBUG      Para 236: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056935760>' object has no attribute 'ListId'
+2026-06-22 05:58:26  DEBUG      Para 237: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:26  DEBUG      Para 238: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052917696>' object has no attribute 'ListId'
+2026-06-22 05:58:26  DEBUG      Para 239: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056935760>' object has no attribute 'ListId'
+2026-06-22 05:58:26  DEBUG      Para 240: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:26  DEBUG      Para 241: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052917696>' object has no attribute 'ListId'
+2026-06-22 05:58:26  DEBUG      Para 242: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056935760>' object has no attribute 'ListId'
+2026-06-22 05:58:26  DEBUG      Para 243: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:26  DEBUG      Para 244: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052917696>' object has no attribute 'ListId'
+2026-06-22 05:58:26  DEBUG      Para 245: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056935760>' object has no attribute 'ListId'
+2026-06-22 05:58:26  DEBUG      Para 246: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:26  DEBUG      Para 247: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052917696>' object has no attribute 'ListId'
+2026-06-22 05:58:26  DEBUG      Para 248: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953056935760>' object has no attribute 'ListId'
+2026-06-22 05:58:26  DEBUG      Para 249: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953053417760>' object has no attribute 'ListId'
+2026-06-22 05:58:27  DEBUG      Para 250: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x1953052917696>' object has no attribute 'ListId'
+2026-06-22 05:58:27  DEBUG      Pass complete -- KeepWithNext OK:29 FAIL:0 | KeepTogether OK:133 FAIL:29 | ListGroups:0
+2026-06-22 05:58:27  DEBUG      Table 2: 8 rows (char 1925)
+2026-06-22 05:58:27  DEBUG      Table 3: 4 rows (char 3178)
+2026-06-22 05:58:27  DEBUG      Table 4: 5 rows (char 5473)
+2026-06-22 05:58:27  DEBUG      Table 5: 4 rows (char 13746)
+2026-06-22 05:58:27  DEBUG      Table 6: 4 rows (char 14677)
+2026-06-22 05:58:27  DEBUG      Table 7: 4 rows (char 18784)
+2026-06-22 05:58:27  DEBUG      Tables done -- rows OK:29 FAIL:0
+2026-06-22 05:58:27  INFO       Formatting rules applied
+2026-06-22 05:58:27  DEBUG      TOC tables found: 0
+2026-06-22 05:58:27  DEBUG      Fields.Update() called
+2026-06-22 05:58:27  DEBUG      doc.Save() OK
+2026-06-22 05:58:27  INFO       COM session COMPLETE -- toc_updated=True
+2026-06-22 05:58:27  DEBUG      doc.Close() OK
+2026-06-22 05:58:27  DEBUG      word.Quit() OK
+2026-06-22 05:58:28  DEBUG      CoUninitialize OK
+2026-06-22 06:02:56  INFO     ============================================================
+2026-06-22 06:02:56  INFO     COM session START: Itc4214 Iasonpapadopoulos Midtermprojectreport_2.docx
+2026-06-22 06:02:56  DEBUG      Platform: Windows
+2026-06-22 06:02:56  DEBUG      pywin32 imported OK
+2026-06-22 06:02:56  DEBUG      CoInitialize OK
+2026-06-22 06:02:56  DEBUG      Word.Application dispatched OK
+2026-06-22 06:02:56  DEBUG      word.Options.UpdateLinksAtOpen = False OK
+2026-06-22 06:02:56  DEBUG      word.Options.ConfirmConversions = False OK
+2026-06-22 06:02:56  DEBUG      word.DisplayAlerts = 0 OK
+2026-06-22 06:02:56  DEBUG      Document opened OK: D:\.IT_Projects\_GIT_hub\CLI - Rhema\output\Itc4214 Iasonpapadopoulos Midtermprojectreport_2.docx
+2026-06-22 06:02:56  INFO       Applying professional formatting rules ...
+2026-06-22 06:02:56  DEBUG      Total paragraphs in document: 252
+2026-06-22 06:02:56  DEBUG      Body start: para 1 (Heading 1: 'COVER PAGE')
+2026-06-22 06:02:58  DEBUG      Body end:   para 50 (before 'CONTENTS' at 51)
+2026-06-22 06:02:58  DEBUG      Body start: para 58 (Heading 1: 'Section 1: Technical Code Analysis')
+2026-06-22 06:03:05  DEBUG      Body section: paras 58 to 50
+2026-06-22 06:03:05  DEBUG      Pass complete -- KeepWithNext OK:0 FAIL:0 | KeepTogether OK:0 FAIL:0 | ListGroups:0
+2026-06-22 06:03:05  DEBUG      Tables done -- rows OK:0 FAIL:0
+2026-06-22 06:03:05  INFO       Formatting rules applied
+2026-06-22 06:03:05  DEBUG      TOC tables found: 1
+2026-06-22 06:03:05  DEBUG      toc.Update() called
+2026-06-22 06:03:05  DEBUG      Fields.Update() called
+2026-06-22 06:03:05  DEBUG      doc.Save() OK
+2026-06-22 06:03:05  INFO       COM session COMPLETE -- toc_updated=True
+2026-06-22 06:03:05  DEBUG      doc.Close() OK
+2026-06-22 06:03:05  DEBUG      word.Quit() OK
+2026-06-22 06:03:05  DEBUG      CoUninitialize OK
+2026-06-22 06:11:04  INFO     ============================================================
+2026-06-22 06:11:04  INFO     COM session START: Itc4214 Iasonpapadopoulos Midtermprojectreport_3.docx
+2026-06-22 06:11:04  DEBUG      Platform: Windows
+2026-06-22 06:11:04  DEBUG      pywin32 imported OK
+2026-06-22 06:11:04  DEBUG      CoInitialize OK
+2026-06-22 06:11:04  DEBUG      Word.Application dispatched OK
+2026-06-22 06:11:04  DEBUG      word.Options.UpdateLinksAtOpen = False OK
+2026-06-22 06:11:04  DEBUG      word.Options.ConfirmConversions = False OK
+2026-06-22 06:11:04  DEBUG      word.DisplayAlerts = 0 OK
+2026-06-22 06:11:04  DEBUG      Document opened OK: D:\.IT_Projects\_GIT_hub\CLI - Rhema\output\Itc4214 Iasonpapadopoulos Midtermprojectreport_3.docx
+2026-06-22 06:11:04  INFO       Applying professional formatting rules ...
+2026-06-22 06:11:04  DEBUG      Total paragraphs in document: 223
+2026-06-22 06:11:05  DEBUG      CONTENTS found at para 52 -- body scan now active
+2026-06-22 06:11:06  DEBUG      Body start: para 55 (Heading 2: 'Magos: A Client-Side Artist Portfolio an')
+2026-06-22 06:11:09  DEBUG      Body end: para 199 (before 'REFERENCES' at 200)
+2026-06-22 06:11:09  DEBUG      Body section: paras 55 to 199
+2026-06-22 06:11:09  DEBUG      Para 55: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109642183008>' object has no attribute 'ListId'
+2026-06-22 06:11:10  DEBUG      Para 55 [Heading 2]: KeepWithNext -1 -> -1  'Magos: A Client-Side Artist Portfolio an'
+2026-06-22 06:11:10  DEBUG      Para 56: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109641436176>' object has no attribute 'ListId'
+2026-06-22 06:11:10  DEBUG      Para 56 [Heading 2]: KeepWithNext -1 -> -1  'Project Report'
+2026-06-22 06:11:10  DEBUG      Para 57: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109641436176>' object has no attribute 'ListId'
+2026-06-22 06:11:10  DEBUG      Para 58: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109646505840>' object has no attribute 'ListId'
+2026-06-22 06:11:10  DEBUG      Para 59: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109646505840>' object has no attribute 'ListId'
+2026-06-22 06:11:10  DEBUG      Para 60: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109646541968>' object has no attribute 'ListId'
+2026-06-22 06:11:10  DEBUG      Para 60 [Heading 1]: KeepWithNext -1 -> -1  'Section 1: Technical Code Analysis'
+2026-06-22 06:11:10  DEBUG      Para 61: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109613735408>' object has no attribute 'ListId'
+2026-06-22 06:11:10  DEBUG      Para 61 [Heading 2]: KeepWithNext -1 -> -1  '1.1 Project Architecture'
+2026-06-22 06:11:10  DEBUG      Para 62: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109613735408>' object has no attribute 'ListId'
+2026-06-22 06:11:10  DEBUG      Para 63: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109646733392>' object has no attribute 'ListId'
+2026-06-22 06:11:10  DEBUG      Para 64: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109646733648>' object has no attribute 'ListId'
+2026-06-22 06:11:10  DEBUG      Para 64 [Heading 1]: KeepWithNext -1 -> -1  'Table 1. File Organisation and Governing'
+2026-06-22 06:11:10  DEBUG      Para 65: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109622574672>' object has no attribute 'ListId'
+2026-06-22 06:11:11  DEBUG      Para 66: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109622574672>' object has no attribute 'ListId'
+2026-06-22 06:11:11  DEBUG      Para 67: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109622705456>' object has no attribute 'ListId'
+2026-06-22 06:11:11  DEBUG      Para 68: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109622705456>' object has no attribute 'ListId'
+2026-06-22 06:11:11  WARNING    Para 68: KeepTogether SET but read back False!
+2026-06-22 06:11:11  DEBUG      Para 69: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109622505824>' object has no attribute 'ListId'
+2026-06-22 06:11:11  DEBUG      Para 70: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109613830032>' object has no attribute 'ListId'
+2026-06-22 06:11:11  DEBUG      Para 71: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109613830032>' object has no attribute 'ListId'
+2026-06-22 06:11:11  DEBUG      Para 72: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109642763168>' object has no attribute 'ListId'
+2026-06-22 06:11:11  WARNING    Para 72: KeepTogether SET but read back False!
+2026-06-22 06:11:11  DEBUG      Para 73: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109642763168>' object has no attribute 'ListId'
+2026-06-22 06:11:11  DEBUG      Para 74: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109641632624>' object has no attribute 'ListId'
+2026-06-22 06:11:12  DEBUG      Para 75: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109641632624>' object has no attribute 'ListId'
+2026-06-22 06:11:12  DEBUG      Para 76: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109641371392>' object has no attribute 'ListId'
+2026-06-22 06:11:12  WARNING    Para 76: KeepTogether SET but read back False!
+2026-06-22 06:11:12  DEBUG      Para 77: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109646692560>' object has no attribute 'ListId'
+2026-06-22 06:11:12  DEBUG      Para 78: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109646692560>' object has no attribute 'ListId'
+2026-06-22 06:11:12  DEBUG      Para 79: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109641545488>' object has no attribute 'ListId'
+2026-06-22 06:11:12  DEBUG      Para 80: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109622435216>' object has no attribute 'ListId'
+2026-06-22 06:11:12  WARNING    Para 80: KeepTogether SET but read back False!
+2026-06-22 06:11:12  DEBUG      Para 81: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109646582608>' object has no attribute 'ListId'
+2026-06-22 06:11:12  DEBUG      Para 82: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109646582608>' object has no attribute 'ListId'
+2026-06-22 06:11:12  DEBUG      Para 83: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109641618960>' object has no attribute 'ListId'
+2026-06-22 06:11:13  DEBUG      Para 84: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109642943824>' object has no attribute 'ListId'
+2026-06-22 06:11:13  WARNING    Para 84: KeepTogether SET but read back False!
+2026-06-22 06:11:13  DEBUG      Para 85: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109646461824>' object has no attribute 'ListId'
+2026-06-22 06:11:13  DEBUG      Para 86: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109641618960>' object has no attribute 'ListId'
+2026-06-22 06:11:13  DEBUG      Para 87: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109642943824>' object has no attribute 'ListId'
+2026-06-22 06:11:13  DEBUG      Para 88: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109646461824>' object has no attribute 'ListId'
+2026-06-22 06:11:13  WARNING    Para 88: KeepTogether SET but read back False!
+2026-06-22 06:11:13  DEBUG      Para 89: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109641618960>' object has no attribute 'ListId'
+2026-06-22 06:11:13  DEBUG      Para 90: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109642943824>' object has no attribute 'ListId'
+2026-06-22 06:11:13  DEBUG      Para 91: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109646461824>' object has no attribute 'ListId'
+2026-06-22 06:11:13  DEBUG      Para 92: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109641618960>' object has no attribute 'ListId'
+2026-06-22 06:11:13  WARNING    Para 92: KeepTogether SET but read back False!
+2026-06-22 06:11:13  DEBUG      Para 93: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109642943824>' object has no attribute 'ListId'
+2026-06-22 06:11:13  DEBUG      Para 94: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109646461824>' object has no attribute 'ListId'
+2026-06-22 06:11:14  DEBUG      Para 95: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109641618960>' object has no attribute 'ListId'
+2026-06-22 06:11:14  DEBUG      Para 96: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109642943824>' object has no attribute 'ListId'
+2026-06-22 06:11:14  WARNING    Para 96: KeepTogether SET but read back False!
+2026-06-22 06:11:14  DEBUG      Para 97: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109641618960>' object has no attribute 'ListId'
+2026-06-22 06:11:14  DEBUG      Para 97 [Heading 2]: KeepWithNext -1 -> -1  '1.2 Inline CSS Justification'
+2026-06-22 06:11:14  DEBUG      Para 98: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109646461824>' object has no attribute 'ListId'
+2026-06-22 06:11:14  DEBUG      Para 99: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109642943824>' object has no attribute 'ListId'
+2026-06-22 06:11:14  DEBUG      Para 99 [Heading 1]: KeepWithNext -1 -> -1  'Table 2. Inline CSS Categories and Justi'
+2026-06-22 06:11:14  DEBUG      Para 100: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109641618960>' object has no attribute 'ListId'
+2026-06-22 06:11:14  DEBUG      Para 101: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109646461824>' object has no attribute 'ListId'
+2026-06-22 06:11:14  DEBUG      Para 102: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109642943824>' object has no attribute 'ListId'
+2026-06-22 06:11:14  WARNING    Para 102: KeepTogether SET but read back False!
+2026-06-22 06:11:14  DEBUG      Para 103: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109641618960>' object has no attribute 'ListId'
+2026-06-22 06:11:14  DEBUG      Para 104: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109646461824>' object has no attribute 'ListId'
+2026-06-22 06:11:15  DEBUG      Para 105: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109642943824>' object has no attribute 'ListId'
+2026-06-22 06:11:15  WARNING    Para 105: KeepTogether SET but read back False!
+2026-06-22 06:11:15  DEBUG      Para 106: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109646461824>' object has no attribute 'ListId'
+2026-06-22 06:11:15  DEBUG      Para 107: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109641618960>' object has no attribute 'ListId'
+2026-06-22 06:11:15  DEBUG      Para 108: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109642943824>' object has no attribute 'ListId'
+2026-06-22 06:11:15  WARNING    Para 108: KeepTogether SET but read back False!
+2026-06-22 06:11:15  DEBUG      Para 109: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109641618960>' object has no attribute 'ListId'
+2026-06-22 06:11:15  DEBUG      Para 110: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109646461824>' object has no attribute 'ListId'
+2026-06-22 06:11:15  DEBUG      Para 111: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109642943824>' object has no attribute 'ListId'
+2026-06-22 06:11:15  WARNING    Para 111: KeepTogether SET but read back False!
+2026-06-22 06:11:15  DEBUG      Para 112: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109641618960>' object has no attribute 'ListId'
+2026-06-22 06:11:15  DEBUG      Para 112 [Heading 2]: KeepWithNext -1 -> -1  '1.3 Shared Layer: common.js'
+2026-06-22 06:11:15  DEBUG      Para 113: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109646461824>' object has no attribute 'ListId'
+2026-06-22 06:11:15  DEBUG      Para 114: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109642943824>' object has no attribute 'ListId'
+2026-06-22 06:11:16  DEBUG      Para 115: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109641618960>' object has no attribute 'ListId'
+2026-06-22 06:11:16  DEBUG      Para 116: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109646461824>' object has no attribute 'ListId'
+2026-06-22 06:11:16  DEBUG      Para 116 [Heading 2]: KeepWithNext -1 -> -1  '1.4 Page-Specific Behaviour'
+2026-06-22 06:11:16  DEBUG      Para 117: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109642943824>' object has no attribute 'ListId'
+2026-06-22 06:11:16  DEBUG      Para 117 [Heading 1]: KeepWithNext -1 -> -1  'Table 3. Page Features and Implementatio'
+2026-06-22 06:11:16  DEBUG      Para 118: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109641618960>' object has no attribute 'ListId'
+2026-06-22 06:11:16  DEBUG      Para 119: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109646461824>' object has no attribute 'ListId'
+2026-06-22 06:11:16  DEBUG      Para 120: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109642943824>' object has no attribute 'ListId'
+2026-06-22 06:11:16  DEBUG      Para 121: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109641618960>' object has no attribute 'ListId'
+2026-06-22 06:11:16  WARNING    Para 121: KeepTogether SET but read back False!
+2026-06-22 06:11:16  DEBUG      Para 122: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109646461824>' object has no attribute 'ListId'
+2026-06-22 06:11:16  DEBUG      Para 123: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109641618960>' object has no attribute 'ListId'
+2026-06-22 06:11:16  DEBUG      Para 124: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109642943824>' object has no attribute 'ListId'
+2026-06-22 06:11:16  DEBUG      Para 125: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109646461824>' object has no attribute 'ListId'
+2026-06-22 06:11:17  WARNING    Para 125: KeepTogether SET but read back False!
+2026-06-22 06:11:17  DEBUG      Para 126: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109641618960>' object has no attribute 'ListId'
+2026-06-22 06:11:17  DEBUG      Para 127: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109642943824>' object has no attribute 'ListId'
+2026-06-22 06:11:17  DEBUG      Para 128: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109646461824>' object has no attribute 'ListId'
+2026-06-22 06:11:17  DEBUG      Para 129: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109641618960>' object has no attribute 'ListId'
+2026-06-22 06:11:17  WARNING    Para 129: KeepTogether SET but read back False!
+2026-06-22 06:11:17  DEBUG      Para 130: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109642943824>' object has no attribute 'ListId'
+2026-06-22 06:11:17  DEBUG      Para 131: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109646461824>' object has no attribute 'ListId'
+2026-06-22 06:11:17  DEBUG      Para 132: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109641618960>' object has no attribute 'ListId'
+2026-06-22 06:11:17  DEBUG      Para 133: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109642943824>' object has no attribute 'ListId'
+2026-06-22 06:11:17  WARNING    Para 133: KeepTogether SET but read back False!
+2026-06-22 06:11:17  DEBUG      Para 134: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109646461824>' object has no attribute 'ListId'
+2026-06-22 06:11:17  DEBUG      Para 135: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109641618960>' object has no attribute 'ListId'
+2026-06-22 06:11:17  DEBUG      Para 136: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109642943824>' object has no attribute 'ListId'
+2026-06-22 06:11:18  DEBUG      Para 137: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109646461824>' object has no attribute 'ListId'
+2026-06-22 06:11:18  WARNING    Para 137: KeepTogether SET but read back False!
+2026-06-22 06:11:18  DEBUG      Para 138: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109641618960>' object has no attribute 'ListId'
+2026-06-22 06:11:18  DEBUG      Para 138 [Heading 3]: KeepWithNext -1 -> -1  '1.4.1 Mouse-Tracking Parallax (index.js)'
+2026-06-22 06:11:18  DEBUG      Para 139: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109642943824>' object has no attribute 'ListId'
+2026-06-22 06:11:18  DEBUG      Para 140: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109646461824>' object has no attribute 'ListId'
+2026-06-22 06:11:18  DEBUG      Para 140 [Heading 3]: KeepWithNext -1 -> -1  '1.4.2 Audio Player (index.js)'
+2026-06-22 06:11:18  DEBUG      Para 141: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109641618960>' object has no attribute 'ListId'
+2026-06-22 06:11:18  DEBUG      Para 142: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109642943824>' object has no attribute 'ListId'
+2026-06-22 06:11:18  DEBUG      Para 142 [Heading 2]: KeepWithNext -1 -> -1  '1.5 Side Quests: The Quest State Machine'
+2026-06-22 06:11:18  DEBUG      Para 143: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109646461824>' object has no attribute 'ListId'
+2026-06-22 06:11:18  DEBUG      Para 144: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109641618960>' object has no attribute 'ListId'
+2026-06-22 06:11:18  DEBUG      Para 145: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109642943824>' object has no attribute 'ListId'
+2026-06-22 06:11:18  DEBUG      Para 146: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109646461824>' object has no attribute 'ListId'
+2026-06-22 06:11:19  DEBUG      Para 146 [Heading 2]: KeepWithNext -1 -> -1  '1.6 Side Quests: The SVG Donut Chart'
+2026-06-22 06:11:19  DEBUG      Para 147: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109641618960>' object has no attribute 'ListId'
+2026-06-22 06:11:19  DEBUG      Para 148: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109642943824>' object has no attribute 'ListId'
+2026-06-22 06:11:19  DEBUG      Para 149: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109646461824>' object has no attribute 'ListId'
+2026-06-22 06:11:19  DEBUG      Para 150: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109641618960>' object has no attribute 'ListId'
+2026-06-22 06:11:19  DEBUG      Para 151: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109642943824>' object has no attribute 'ListId'
+2026-06-22 06:11:19  DEBUG      Para 151 [Heading 2]: KeepWithNext -1 -> -1  '1.7 Colour Semantics'
+2026-06-22 06:11:19  DEBUG      Para 152: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109646461824>' object has no attribute 'ListId'
+2026-06-22 06:11:19  DEBUG      Para 152 [Heading 1]: KeepWithNext -1 -> -1  'Table 4. Colour-Semantic Mapping'
+2026-06-22 06:11:19  DEBUG      Para 153: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109641618960>' object has no attribute 'ListId'
+2026-06-22 06:11:19  DEBUG      Para 154: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109642943824>' object has no attribute 'ListId'
+2026-06-22 06:11:19  DEBUG      Para 155: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109646461824>' object has no attribute 'ListId'
+2026-06-22 06:11:19  DEBUG      Para 156: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109641618960>' object has no attribute 'ListId'
+2026-06-22 06:11:20  WARNING    Para 156: KeepTogether SET but read back False!
+2026-06-22 06:11:20  DEBUG      Para 157: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109642943824>' object has no attribute 'ListId'
+2026-06-22 06:11:20  DEBUG      Para 158: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109641618960>' object has no attribute 'ListId'
+2026-06-22 06:11:20  DEBUG      Para 159: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109646461824>' object has no attribute 'ListId'
+2026-06-22 06:11:20  DEBUG      Para 160: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109642943824>' object has no attribute 'ListId'
+2026-06-22 06:11:20  WARNING    Para 160: KeepTogether SET but read back False!
+2026-06-22 06:11:20  DEBUG      Para 161: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109641618960>' object has no attribute 'ListId'
+2026-06-22 06:11:20  DEBUG      Para 162: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109646461824>' object has no attribute 'ListId'
+2026-06-22 06:11:20  DEBUG      Para 163: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109642943824>' object has no attribute 'ListId'
+2026-06-22 06:11:20  DEBUG      Para 164: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109641618960>' object has no attribute 'ListId'
+2026-06-22 06:11:20  WARNING    Para 164: KeepTogether SET but read back False!
+2026-06-22 06:11:20  DEBUG      Para 165: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109642943824>' object has no attribute 'ListId'
+2026-06-22 06:11:20  DEBUG      Para 166: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109646461824>' object has no attribute 'ListId'
+2026-06-22 06:11:21  DEBUG      Para 167: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109641618960>' object has no attribute 'ListId'
+2026-06-22 06:11:21  DEBUG      Para 168: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109642943824>' object has no attribute 'ListId'
+2026-06-22 06:11:21  WARNING    Para 168: KeepTogether SET but read back False!
+2026-06-22 06:11:21  DEBUG      Para 169: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109641618960>' object has no attribute 'ListId'
+2026-06-22 06:11:21  DEBUG      Para 170: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109646461824>' object has no attribute 'ListId'
+2026-06-22 06:11:21  DEBUG      Para 171: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109642943824>' object has no attribute 'ListId'
+2026-06-22 06:11:21  DEBUG      Para 171 [Heading 1]: KeepWithNext -1 -> -1  'Section 2: Development Process'
+2026-06-22 06:11:21  DEBUG      Para 172: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109641618960>' object has no attribute 'ListId'
+2026-06-22 06:11:21  DEBUG      Para 172 [Heading 2]: KeepWithNext -1 -> -1  '2.1 Version Control'
+2026-06-22 06:11:21  DEBUG      Para 173: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109646461824>' object has no attribute 'ListId'
+2026-06-22 06:11:21  DEBUG      Para 174: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109642943824>' object has no attribute 'ListId'
+2026-06-22 06:11:21  DEBUG      Para 174 [Heading 2]: KeepWithNext -1 -> -1  '2.2 Development Timeline'
+2026-06-22 06:11:21  DEBUG      Para 175: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109641618960>' object has no attribute 'ListId'
+2026-06-22 06:11:21  DEBUG      Para 175 [Heading 1]: KeepWithNext -1 -> -1  'Table 5. Development Sessions'
+2026-06-22 06:11:21  DEBUG      Para 176: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109646461824>' object has no attribute 'ListId'
+2026-06-22 06:11:22  DEBUG      Para 177: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109642943824>' object has no attribute 'ListId'
+2026-06-22 06:11:22  DEBUG      Para 178: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109641618960>' object has no attribute 'ListId'
+2026-06-22 06:11:22  WARNING    Para 178: KeepTogether SET but read back False!
+2026-06-22 06:11:22  DEBUG      Para 179: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109646461824>' object has no attribute 'ListId'
+2026-06-22 06:11:22  DEBUG      Para 180: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109642943824>' object has no attribute 'ListId'
+2026-06-22 06:11:22  DEBUG      Para 181: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109641618960>' object has no attribute 'ListId'
+2026-06-22 06:11:22  WARNING    Para 181: KeepTogether SET but read back False!
+2026-06-22 06:11:22  DEBUG      Para 182: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109642943824>' object has no attribute 'ListId'
+2026-06-22 06:11:22  DEBUG      Para 183: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109646461824>' object has no attribute 'ListId'
+2026-06-22 06:11:22  DEBUG      Para 184: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109641618960>' object has no attribute 'ListId'
+2026-06-22 06:11:22  WARNING    Para 184: KeepTogether SET but read back False!
+2026-06-22 06:11:22  DEBUG      Para 185: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109646461824>' object has no attribute 'ListId'
+2026-06-22 06:11:22  DEBUG      Para 186: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109642943824>' object has no attribute 'ListId'
+2026-06-22 06:11:22  DEBUG      Para 187: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109641618960>' object has no attribute 'ListId'
+2026-06-22 06:11:23  WARNING    Para 187: KeepTogether SET but read back False!
+2026-06-22 06:11:23  DEBUG      Para 188: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109646461824>' object has no attribute 'ListId'
+2026-06-22 06:11:23  DEBUG      Para 188 [Heading 2]: KeepWithNext -1 -> -1  '2.3 Significant Technical Challenges'
+2026-06-22 06:11:23  DEBUG      Para 189: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109642943824>' object has no attribute 'ListId'
+2026-06-22 06:11:23  DEBUG      Para 189 [Heading 3]: KeepWithNext -1 -> -1  'Dark and Light Theme (12 Bugs)'
+2026-06-22 06:11:23  DEBUG      Para 190: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109641618960>' object has no attribute 'ListId'
+2026-06-22 06:11:23  DEBUG      Para 191: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109646461824>' object has no attribute 'ListId'
+2026-06-22 06:11:23  DEBUG      Para 191 [Heading 3]: KeepWithNext -1 -> -1  'ARIA Focus Ring (3 Attempts)'
+2026-06-22 06:11:23  DEBUG      Para 192: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109642943824>' object has no attribute 'ListId'
+2026-06-22 06:11:23  DEBUG      Para 193: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109641618960>' object has no attribute 'ListId'
+2026-06-22 06:11:23  DEBUG      Para 193 [Heading 3]: KeepWithNext -1 -> -1  'Chrome Autofill Preview (3 Attempts)'
+2026-06-22 06:11:23  DEBUG      Para 194: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109646461824>' object has no attribute 'ListId'
+2026-06-22 06:11:23  DEBUG      Para 195: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109642943824>' object has no attribute 'ListId'
+2026-06-22 06:11:23  DEBUG      Para 195 [Heading 2]: KeepWithNext -1 -> -1  '2.4 Final Validation'
+2026-06-22 06:11:23  DEBUG      Para 196: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109641618960>' object has no attribute 'ListId'
+2026-06-22 06:11:23  DEBUG      Para 197: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109646461824>' object has no attribute 'ListId'
+2026-06-22 06:11:24  DEBUG      Para 198: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109642943824>' object has no attribute 'ListId'
+2026-06-22 06:11:24  DEBUG      Para 199: ListId error: '<win32com.gen_py.Microsoft Word 16.0 Object Library.ListFormat instance at 0x2109641618960>' object has no attribute 'ListId'
+2026-06-22 06:11:24  DEBUG      Pass complete -- KeepWithNext OK:25 FAIL:0 | KeepTogether OK:90 FAIL:25 | ListGroups:0
+2026-06-22 06:11:24  DEBUG      Table 2: 8 rows (char 1956)
+2026-06-22 06:11:24  DEBUG      Table 3: 4 rows (char 3209)
+2026-06-22 06:11:24  DEBUG      Table 4: 5 rows (char 5504)
+2026-06-22 06:11:24  DEBUG      Table 5: 4 rows (char 13777)
+2026-06-22 06:11:24  DEBUG      Table 6: 4 rows (char 14708)
+2026-06-22 06:11:25  DEBUG      Tables done -- rows OK:25 FAIL:0
+2026-06-22 06:11:25  INFO       Formatting rules applied
+2026-06-22 06:11:25  DEBUG      TOC tables found: 1
+2026-06-22 06:11:25  DEBUG      toc.Update() called
+2026-06-22 06:11:25  DEBUG      Fields.Update() called
+2026-06-22 06:11:25  DEBUG      doc.Save() OK
+2026-06-22 06:11:25  INFO       COM session COMPLETE -- toc_updated=True
+2026-06-22 06:11:25  DEBUG      doc.Close() OK
+2026-06-22 06:11:25  DEBUG      word.Quit() OK
+2026-06-22 06:11:25  DEBUG      CoUninitialize OK

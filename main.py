@@ -1,9 +1,10 @@
 # Source Trace:
-# File: main_v0.1.py
+# File: main_v0.2.py
 # Knowledge Files: CodeSourceDB v3.6, SyntaxBiasDB v2.3, HumanSyntaxDB v1.2
 # REF_IDs: RM_DO178_001, RM_HCI_004, RM_HCI_002, WEB_PY_002, WEB_PY_007
 # Logic: Entry point. CLI argument parsing, mode routing, interactive menu loop,
 #        and top-level exception handler that routes diagnostics to stderr.
+#        v0.2 -- Added MENU_OPTION_SAMPLE routing and _run_sample_mode dispatcher.
 
 """
 Rhema -- Auto Formatter
@@ -31,6 +32,7 @@ from config.constants import (
     MENU_OPTION_SINGLE,
     MENU_OPTION_BATCH,
     MENU_OPTION_LIBRARY,
+    MENU_OPTION_SAMPLE,
     MENU_OPTION_EXIT,
     EXIT_SUCCESS,
     EXIT_ERROR,
@@ -59,6 +61,12 @@ def _run_library_mode() -> None:
     """Runs the template library management mode."""
     from modes.library import run_library_mode
     run_library_mode()
+
+
+def _run_sample_mode() -> None:
+    """Runs the format template generator mode."""
+    from modes.sample import run_sample_mode
+    run_sample_mode()
 
 
 # ---------------------------------------------------------------------------
@@ -124,6 +132,8 @@ def _route(option: str) -> None:
         _run_batch_mode()
     elif option == MENU_OPTION_LIBRARY:
         _run_library_mode()
+    elif option == MENU_OPTION_SAMPLE:
+        _run_sample_mode()
     # MENU_OPTION_EXIT is handled by the caller -- not routed here
 
 

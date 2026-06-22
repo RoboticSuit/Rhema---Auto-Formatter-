@@ -1,8 +1,9 @@
 # Source Trace:
-# File: menu_v0.1.py
+# File: menu_v0.2.py
 # Knowledge Files: CodeSourceDB v3.6, SyntaxBiasDB v2.3, HumanSyntaxDB v1.2, mainProtocol v5.5
 # REF_IDs: RM_DO178_001, RM_HCI_002, RM_HCI_004, WEB_PY_001
 # Logic: Interactive menu display and strictly validated user input routing with explicit typing.
+#        v0.2 -- Added option 4 (Get Format Template). Exit renumbered to 5.
 
 """
 Rhema -- Auto Formatter

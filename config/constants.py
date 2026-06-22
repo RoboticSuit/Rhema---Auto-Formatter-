@@ -1,9 +1,11 @@
 # Source Trace:
-# File: constants_v0.2.py
+# File: constants_v0.3.py
 # Knowledge Files: CodeSourceDB v3.6, SyntaxBiasDB v2.3, HumanSyntaxDB v1.2
 # REF_IDs: RM_DO178_001, RM_HCI_004, RM_NIST_001, WEB_PY_010
 # Logic: Centralized declaration of application constants, POSIX exit codes, explicit UI
 #        signals, and OOXML unit conversion values. No logic lives here.
+#        v0.3 -- Added MENU_OPTION_SAMPLE (option 4). Exit renumbered to 5.
+#                Added SAMPLE_OUTPUT_FILENAME for the generated format sample.
 
 """
 Rhema -- Auto Formatter
@@ -59,6 +61,11 @@ ACCEPTED_TEMPLATE_EXTENSIONS: set[str] = {".tmpt", ".dotx", ".docx"}
 
 # Output document extension
 OUTPUT_EXTENSION: str = ".docx"
+
+# Default filename for the generated format sample document.
+# Collision avoidance is applied at write time if this name already exists.
+# REF_ID: RM_DO178_001
+SAMPLE_OUTPUT_FILENAME: str = "Rhema_Format_Sample"
 
 # ---------------------------------------------------------------------------
 # Default paths -- resolved relative to the user's home directory
@@ -169,12 +176,14 @@ TEMPLATE_OVERWRITE_CONFIRM_SIGNAL: str = "replace"
 MENU_OPTION_SINGLE: str  = "1"
 MENU_OPTION_BATCH: str   = "2"
 MENU_OPTION_LIBRARY: str = "3"
-MENU_OPTION_EXIT: str    = "4"
+MENU_OPTION_SAMPLE: str  = "4"   # Generate a format sample template
+MENU_OPTION_EXIT: str    = "5"
 
 MENU_VALID_OPTIONS: set[str] = {
     MENU_OPTION_SINGLE,
     MENU_OPTION_BATCH,
     MENU_OPTION_LIBRARY,
+    MENU_OPTION_SAMPLE,
     MENU_OPTION_EXIT,
 }
 

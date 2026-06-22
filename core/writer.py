@@ -244,24 +244,57 @@ def _apply_professional_formatting(doc: Any, log: logging.Logger) -> None:
 
     # -----------------------------------------------------------------------
     # Locate body section
+    # body_start is the first Heading paragraph found AFTER the CONTENTS
+    # section. Using a contents_found flag prevents the COVER PAGE heading
+    # (which appears before CONTENTS) from being incorrectly used as the
+    # body start, which would make body_start > body_end and skip all
+    # formatting. REF_ID: RM_DO178_001
     # -----------------------------------------------------------------------
-    body_start: int = 1
-    body_end:   int = total
+    body_start:     int  = 1
+    body_end:       int  = total
+    contents_found: bool = False
+    body_start_set: bool = False
 
     for i in range(1, min(total + 1, MAX_SCAN)):
         try:
             sname = doc.Paragraphs(i).Style.NameLocal
             txt   = doc.Paragraphs(i).Range.Text.strip()
-            if sname.startswith("Heading 1") and body_start == 1:
-                body_start = i
-                log.debug(f"  Body start: para {i} ({sname}: '{txt[:40]}')")
-            if sname == "Title" and txt in ("REFERENCES", "CONTENTS"):
+
+            # Detect CONTENTS or REFERENCES structural markers
+            if sname == "Title" and txt == "CONTENTS":
+                contents_found = True
+                log.debug(f"  CONTENTS found at para {i} -- body scan now active")
+                continue
+
+            if sname == "Title" and txt == "REFERENCES":
                 body_end = i - 1
-                log.debug(f"  Body end:   para {body_end} (before '{txt}' at {i})")
-                if txt == "REFERENCES":
-                    break
+                log.debug(f"  Body end: para {body_end} (before 'REFERENCES' at {i})")
+                break
+
+            # body_start: first Heading paragraph found AFTER CONTENTS
+            if (contents_found and
+                    body_start_set is False and
+                    sname.startswith("Heading")):
+                body_start = i
+                body_start_set = True
+                log.debug(f"  Body start: para {i} ({sname}: '{txt[:40]}')")
+
         except Exception as e:
             log.debug(f"  Body scan error at para {i}: {e}")
+
+    # Safety fallback: if CONTENTS was never found (simple template without TOC),
+    # fall back to scanning for any Heading 1 as body_start.
+    # REF_ID: RM_DO178_001
+    if body_start_set is False:
+        for i in range(1, min(total + 1, MAX_SCAN)):
+            try:
+                sname = doc.Paragraphs(i).Style.NameLocal
+                if sname.startswith("Heading 1"):
+                    body_start = i
+                    log.debug(f"  Body start (fallback): para {i} ({sname})")
+                    break
+            except Exception:
+                pass
 
     log.debug(f"  Body section: paras {body_start} to {body_end}")
 
