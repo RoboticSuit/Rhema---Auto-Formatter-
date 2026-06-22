@@ -177,6 +177,22 @@ def _post_process_docx(path: Path) -> None:
             '<w:fldChar w:fldCharType="begin" w:dirty="true"/>',
         )
 
+        # Fix TOC field instruction.
+        # \h adds hyperlink navigation so Ctrl+Click works on every TOC entry.
+        # \o "1-3" uses outline-level attributes to detect headings -- reliable
+        # regardless of style display name spacing or casing in the template.
+        # The previous \t switch referenced "Heading1,1,Heading2,2" (no spaces)
+        # which never matched Word's actual style names "Heading 1", "Heading 2",
+        # so it silently did nothing. Dropped in favour of \o alone.
+        # Lambda replacement used instead of r-string to avoid Python 3.12
+        # re.sub treating \h as an invalid backreference. REF_ID: RM_DO178_001
+        _TOC_INSTR: str = ' TOC \\h \\o "1-3" '
+        doc_xml = _re.sub(
+            r'(<w:instrText[^>]*>)[^<]*TOC[^<]*(</w:instrText>)',
+            lambda m: m.group(1) + _TOC_INSTR + m.group(2),
+            doc_xml,
+        )
+
         import re as _re2
         doc_xml = _re2.sub(
             r'(<w:fldChar w:fldCharType="separate"/>)(.*?)'
