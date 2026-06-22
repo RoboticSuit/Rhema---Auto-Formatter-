@@ -30,7 +30,6 @@ Governing standards:
   Python COM automation       -- REF_ID: WEB_PY_011
 """
 
-import os
 import logging
 from pathlib import Path
 from dataclasses import dataclass
@@ -415,6 +414,19 @@ def _apply_professional_formatting(doc: Any, log: logging.Logger) -> None:
 # ---------------------------------------------------------------------------
 
 def _finalize_document_via_word(path: Path) -> bool:
+    """
+    Open the saved .docx in Word via COM, apply professional formatting rules,
+    update the TOC, and save.
+
+    Each Word API call is wrapped individually so a failure in one step does
+    not abort the session. Word.Quit() and CoUninitialize() run in a finally
+    block so Word is never left open in the background. doc.Save() is called
+    in both the normal path and the exception handler so formatting changes
+    are always preserved if the document was successfully opened.
+
+    Returns True if the TOC was updated successfully, False otherwise.
+    REF_IDs: RM_DO178_001, WEB_PY_011, RM_ISO_001
+    """
     log = _get_logger()
     log.info("=" * 60)
     log.info(f"COM session START: {path.name}")
@@ -434,58 +446,129 @@ def _finalize_document_via_word(path: Path) -> bool:
         log.error(f"  pywin32 import FAILED: {e}")
         return False
 
+    # Track whether Word and the document were successfully opened so the
+    # finally block knows what to clean up. REF_ID: RM_DO178_001
+    word: Any = None
+    doc:  Any = None
+    doc_saved:   bool = False
+    toc_updated: bool = False
+
     try:
         _pycom.CoInitialize()
         log.debug("  CoInitialize OK")
 
-        word: Any = _win32.Dispatch("Word.Application")
-        word.Visible = False
-        word.Options.UpdateLinksAtOpen  = False
-        word.Options.ConfirmConversions = False
-        word.DisplayAlerts              = 0
-        log.debug("  Word.Application dispatched OK")
+        # --- Dispatch Word application ---
+        try:
+            word = _win32.Dispatch("Word.Application")
+            word.Visible = False
+            log.debug("  Word.Application dispatched OK")
+        except Exception as e:
+            log.error(f"  Word.Application dispatch FAILED: {type(e).__name__}: {e}")
+            return False
 
-        doc: Any = word.Documents.Open(
-            str(path.resolve()),
-            ConfirmConversions=False,
-            ReadOnly=False,
-            AddToRecentFiles=False,
-        )
-        log.debug(f"  Document opened OK: {path.resolve()}")
+        # --- Optional application-level settings (non-fatal if they fail) ---
+        for attr, val in (
+            ("Options.UpdateLinksAtOpen",  False),
+            ("Options.ConfirmConversions", False),
+            ("DisplayAlerts",              0),
+        ):
+            try:
+                # Traverse dotted attribute path to set nested properties
+                obj = word
+                parts = attr.split(".")
+                for part in parts[:-1]:
+                    obj = getattr(obj, part)
+                setattr(obj, parts[-1], val)
+                log.debug(f"  word.{attr} = {val} OK")
+            except Exception as e:
+                log.warning(f"  word.{attr} = {val} FAILED (non-fatal): {e}")
 
-        # Step 1: Apply professional formatting rules
-        log.info("  Applying professional formatting rules ...")
-        _apply_professional_formatting(doc, log)
-        log.info("  Formatting rules applied")
+        # --- Open document ---
+        try:
+            doc = word.Documents.Open(
+                str(path.resolve()),
+                ConfirmConversions=False,
+                ReadOnly=False,
+                AddToRecentFiles=False,
+            )
+            log.debug(f"  Document opened OK: {path.resolve()}")
+        except Exception as e:
+            log.error(f"  Documents.Open FAILED: {type(e).__name__}: {e}")
+            return False
 
-        # Step 2: Full TOC rebuild
-        toc_count: int = doc.TablesOfContents.Count
-        log.debug(f"  TOC tables found: {toc_count}")
-        for toc in doc.TablesOfContents:
-            toc.Update()
-            log.debug("  toc.Update() called")
+        # --- Step 1: Professional formatting rules ---
+        try:
+            log.info("  Applying professional formatting rules ...")
+            _apply_professional_formatting(doc, log)
+            log.info("  Formatting rules applied")
+        except Exception as e:
+            log.warning(f"  _apply_professional_formatting FAILED (non-fatal): {e}")
 
-        # Step 3: Update remaining fields
-        doc.Fields.Update()
-        log.debug("  Fields.Update() called")
+        # --- Step 2: TOC update ---
+        try:
+            toc_count: int = doc.TablesOfContents.Count
+            log.debug(f"  TOC tables found: {toc_count}")
+            for toc in doc.TablesOfContents:
+                toc.Update()
+                log.debug("  toc.Update() called")
+            toc_updated = True
+        except Exception as e:
+            log.warning(f"  TOC update FAILED (non-fatal): {e}")
 
-        doc.Save()
-        log.debug("  doc.Save() OK")
+        # --- Step 3: Remaining fields update ---
+        try:
+            doc.Fields.Update()
+            log.debug("  Fields.Update() called")
+        except Exception as e:
+            log.warning(f"  Fields.Update FAILED (non-fatal): {e}")
 
-        doc.Close(SaveChanges=True)
-        word.Quit()
-        _pycom.CoUninitialize()
+        # --- Save ---
+        try:
+            doc.Save()
+            doc_saved = True
+            log.debug("  doc.Save() OK")
+        except Exception as e:
+            log.error(f"  doc.Save() FAILED: {type(e).__name__}: {e}")
 
-        log.info("  COM session COMPLETE -- toc_updated=True")
-        return True
+        log.info(f"  COM session COMPLETE -- toc_updated={toc_updated}")
+        return toc_updated
 
     except Exception as e:
-        log.error(f"  COM session FAILED with exception: {type(e).__name__}: {e}")
+        # Outer catch for any unexpected failure not caught by the inner blocks
+        log.error(f"  COM session outer exception: {type(e).__name__}: {e}")
+
+        # Emergency save attempt if the document is open but not yet saved
+        if doc is not None and doc_saved is False:
+            try:
+                doc.Save()
+                log.debug("  Emergency doc.Save() OK")
+            except Exception as save_e:
+                log.error(f"  Emergency doc.Save() FAILED: {save_e}")
+
+        return False
+
+    finally:
+        # Guarantee Word is closed regardless of how the session ended.
+        # REF_ID: WEB_PY_011 -- COM objects must always be released.
+        if doc is not None:
+            try:
+                doc.Close(SaveChanges=True)
+                log.debug("  doc.Close() OK")
+            except Exception as e:
+                log.warning(f"  doc.Close() FAILED: {e}")
+
+        if word is not None:
+            try:
+                word.Quit()
+                log.debug("  word.Quit() OK")
+            except Exception as e:
+                log.warning(f"  word.Quit() FAILED: {e}")
+
         try:
             _pycom.CoUninitialize()
-        except Exception:
-            pass
-        return False
+            log.debug("  CoUninitialize OK")
+        except Exception as e:
+            log.warning(f"  CoUninitialize FAILED: {e}")
 
 
 # ---------------------------------------------------------------------------
