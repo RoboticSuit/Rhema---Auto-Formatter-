@@ -1,0 +1,22 @@
+{
+  // Recommended VS Code extensions for the Rhema project.
+  // VS Code will prompt you to install any that are not already present.
+  "recommendations": [
+    // Python language support, debugger, test runner, and interpreter selector.
+    // Required -- without this no Python tooling works in VS Code.
+    "ms-python.python",
+
+    // Pylance -- IntelliSense engine, type checking, and import resolution.
+    // Reads your type annotations and flags type mismatches as you type.
+    // Required for full IntelliSense on python-docx, lxml, and docxtpl.
+    "ms-python.vscode-pylance",
+
+    // Ruff -- fast Python linter and formatter (replaces flake8 + black).
+    // Optional but recommended: catches style issues on save.
+    "charliermarsh.ruff",
+
+    // Even Better TOML -- syntax highlighting for pyproject.toml if used later.
+    // Optional.
+    "tamasfe.even-better-toml"
+  ]
+}

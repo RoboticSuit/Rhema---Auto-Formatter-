@@ -1,0 +1,39 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      // Launch Rhema interactively -- shows the main menu in the Debug Console.
+      // cwd is set to ${workspaceFolder} so Path.cwd() / "output" resolves
+      // to the project root's output/ folder, matching production behaviour.
+      "name": "Rhema -- Interactive Menu",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/main.py",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      // Launch directly into single-file formatting mode, skipping the menu.
+      "name": "Rhema -- Single Mode",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/main.py",
+      "args": ["--single"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      // Launch directly into template library management mode.
+      "name": "Rhema -- Library Mode",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/main.py",
+      "args": ["--library"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "justMyCode": true
+    }
+  ]
+}
